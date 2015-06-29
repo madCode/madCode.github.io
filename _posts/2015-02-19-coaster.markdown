@@ -8,7 +8,7 @@ teaser: /images/coaster/header1.jpg
 tags: coaster prototype
 maintag: coaster
 
-video: <iframe class="flex-video-widescreen" src="https://www.youtube.com/embed/TRWMHCnoQ3U" frameborder="0" width="100%"></iframe>
+video: <iframe class="flex-video-widescreen" src="https://www.youtube.com/embed/TRWMHCnoQ3U" frameborder="0" width="100%" height="300px"></iframe>
 
 instructions: instructions/2015/02/19/diycoaster/
 hackster: https://www.hackster.io/team-avocado/chatty-coasters
