@@ -1,11 +1,33 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: Porfolio
+tagline: 
+displaycategory: portfolio
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+<section id="portfolio" class="bg-light-gray">
+    <div class="container">
+        {% for post in site.posts %}
+        {% if post.categories contains page.displaycategory %}
+            <a href="{{ BASE_PATH }}{{ post.url }}" class="col-md-4 col-sm-6 portfolio-item">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{{post.teaser}}" class="img-responsive" alt="{{post.title}} header image">
+                <div class="portfolio-caption">
+                    <h4>{{ post.title }}</h4>
+                    <p class="text-muted">{{ post.tagline }}</p>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
 
 Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
 
@@ -41,6 +63,6 @@ Here's a sample "posts list".
 ## To-Do
 
 This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
+We need to clean up the themes, make theme usage guides with theme-specific markup examples. -->
 
 

@@ -10,14 +10,14 @@
     <div class="content">
       {{ content }}
     </div>
-
+<!-- 
   {% unless page.categories == empty %}
     <ul class="tag_box inline">
       <li><i class="glyphicon glyphicon-open"></i></li>
       {% assign categories_list = page.categories %}
       {% include JB/categories_list %}
     </ul>
-  {% endunless %}  
+  {% endunless %}   -->
 
   {% unless page.tags == empty %}
     <ul class="tag_box inline">
@@ -27,6 +27,16 @@
     </ul>
   {% endunless %}  
   
+    <hr>
+    <h1>Related Posts</h1>
+    <ul class="posts">
+    {% for post in site.posts %}
+    {% if post.tags contains page.maintag and post.title != page.title %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}: <small>{{post.tagline}}</small></a> </li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+
     <hr>
     <ul class="pagination">
     {% if page.previous %}
