@@ -1,21 +1,15 @@
 ---
-layout: page
-title: Porfolio
+layout: default
+title: Home
 tagline: 
 displaycategory: portfolio
 ---
 {% include JB/setup %}
 
 <section id="portfolio" class="bg-light-gray">
-    <div class="container">
         {% for post in site.posts %}
         {% if post.categories contains page.displaycategory %}
-            <a href="{{ BASE_PATH }}{{ post.url }}" class="col-md-4 col-sm-6 portfolio-item">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
+            <a href="{{ BASE_PATH }}{{ post.url }}" class="col-sm-6">
                     <img src="{{post.teaser}}" class="img-responsive" alt="{{post.title}} header image">
                 <div class="portfolio-caption">
                     <h4>{{ post.title }}</h4>
@@ -24,7 +18,6 @@ displaycategory: portfolio
             </div>
             {% endif %}
         {% endfor %}
-    </div>
 </section>
 
 <!-- Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
