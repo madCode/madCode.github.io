@@ -4,57 +4,36 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/* Toggle Styles */
-/*
-#wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}*/
-
-/*#wrapper.toggled {
-    padding-left: 250px;
-}
-
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-}*/
-
-/*#page-content-wrapper {
-    width: 75%;
-    position: absolute;
-    padding: 15px;
-}*/
-
-/*#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}*/
-
 /* Sidebar Styles */
+
 /*
  * Sidebar
  *
  * Flexible banner for housing site name, intro, and "footer" content. Starts
  * out above content in mobile and later moves to the side with wider viewports.
  */
+
+ .sidebar-profile {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #202020;
+}
+@media (min-width: 48rem) {
+  .sidebar-profile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25rem;
+    text-align: left;
+  }
+}
+
+/* Sidebar links */
+.sidebar-profile a {
+  color: #fff;
+}
 
 .sidebar {
   text-align: center;
@@ -136,7 +115,12 @@ a.sidebar-nav-item:focus {
     }
 
     #page-content-wrapper {
-        padding: 70px;
+        padding: 0 80px;
+        position: relative;
+    }
+
+    .page-content-wrapper-profile {
+        padding: 0 300px;
         position: relative;
     }
 
@@ -146,7 +130,9 @@ a.sidebar-nav-item:focus {
     }
 }
 
-.social {
+/** Social Buttons **/
+
+.social {zz
   display: inline-block;
   list-style-type: none;
   padding: 0;

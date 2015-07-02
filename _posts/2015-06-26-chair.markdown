@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: portfoliopiece
 title:  "ChairVoyager"
 date:   2015-06-25 20:03:59
 category: portfolio

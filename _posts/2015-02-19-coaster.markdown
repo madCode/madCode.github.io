@@ -1,5 +1,5 @@
 ---
-layout: portfoliopiece
+layout: default
 title:  Chatty Coaster
 date:   2015-02-19 20:03:59
 category: portfolio

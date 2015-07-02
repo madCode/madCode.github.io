@@ -12,10 +12,10 @@
     <title>{{page.title}}</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="{{site.baseurl}}css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="{{site.baseurl}}css/simple-sidebar.css" rel="stylesheet">
 
     <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 
@@ -34,8 +34,9 @@
 
     <div id="wrapper">
 
-        {%if page.categories contains 'porfolio'%}
-        {%else%}
+        {% if page.categories contains 'portfolio' %}
+        {% include portfoliosidebar.html %}
+        {% else %}
         {%include homesidebar.html%}
         {%endif%}
 
@@ -55,10 +56,10 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="{{site.baseurl}}js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{site.baseurl}}js/bootstrap.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>

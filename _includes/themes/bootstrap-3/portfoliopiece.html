@@ -1,68 +1,60 @@
-<div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="row post-full">
-  <div class="col-xs-12">
-    <div class="date">
-      <span>{{ page.date | date_to_long_string }}</span>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{page.title}}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{{site.baseurl}}css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{site.baseurl}}css/simple-sidebar.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        {% include portfoliosidebar.html %}
+
+        <!-- Page Content -->
+        <div class="page-content-wrapper-portfolio">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {{content}}
+                    </div>
+                </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
     </div>
-    <div class="content">
-      <div id='left-hand column' class="col-sm-6 portfolio-item">
-		{{page.video}}
-		<a href="{{ BASE_PATH}}{{page.instructions}}">Make your own!</a><br/>
-		<a href="{{page.hackster}}">View project on hackster</a><br/>
-		<a href="{{page.github}}">View code in github</a><p>
-	  </div>
-	  <div id='right-hand column' class="col-sm-6 portfolio-item">
-		<!-- maybe make carousel here? -->
-		{{content}}
-	  </div>
-    </div>
-    </div>
-<!-- 
-  {% unless page.categories == empty %}
-    <ul class="tag_box inline">
-      <li><i class="glyphicon glyphicon-open"></i></li>
-      {% assign categories_list = page.categories %}
-      {% include JB/categories_list %}
-    </ul>
-  {% endunless %}   -->
-  {% unless page.tags == empty %}
-    <ul class="tag_box inline">
-      <li><i class="glyphicon glyphicon-tags"></i></li>
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
-    </ul>
-  {% endunless %}  
-  
-    <hr>
-    <h1>Related Posts</h1>
-    <ul class="posts">
-    {% for post in site.posts %}
-    {% if post.tags contains page.maintag and post.title != page.title %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}: <small>{{post.tagline}}</small></a> </li>
-    {% endif %}
-    {% endfor %}
-    </ul>
+    <!-- /#wrapper -->
 
-    <hr>
-    <ul class="pagination">
-    {% if page.previous %}
-      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
-    {% else %}
-      <li class="prev disabled"><a>&larr; Previous</a></li>
-    {% endif %}
-      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
-    {% if page.next %}
-      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
-    {% else %}
-      <li class="next disabled"><a>Next &rarr;</a>
-    {% endif %}
-    </ul>
-    <hr>
-    {% include JB/comments %}
-  </div>
-</div>
+    <!-- jQuery -->
+    <script src="{{site.baseurl}}js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{site.baseurl}}js/bootstrap.min.js"></script>
 
+</body>
+
+</html>

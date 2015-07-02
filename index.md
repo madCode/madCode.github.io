@@ -5,8 +5,9 @@ tagline:
 displaycategory: portfolio
 ---
 {% include JB/setup %}
-
-<section id="portfolio" class="bg-light-gray">
+<h1>Portfolio</h1>
+<hr>
+<section id="portfolio">
         {% for post in site.posts %}
         {% if post.categories contains page.displaycategory %}
             <a href="{{ BASE_PATH }}{{ post.url }}" class="col-md-4 col-sm-6">
@@ -15,9 +16,21 @@ displaycategory: portfolio
                     <h4>{{ post.title }}</h4>
                     <p class="text-muted">{{ post.tagline }}</p>
                 </div>
-            </div>
+            </a>
             {% endif %}
         {% endfor %}
+</section>
+
+<section id="blog posts" class="col-sm-12">
+<h1>Blog</h1>
+<hr>
+<ul>
+{% for post in site.posts %}
+{% unless post.categories contains 'portfolio' %}
+<li><a href="{{post.url}}">{{post.title}}</a></li>
+{% endunless %}
+{% endfor %}
+</ul>
 </section>
 
 <!-- Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
