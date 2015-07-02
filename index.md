@@ -9,7 +9,7 @@ displaycategory: portfolio
 <section id="portfolio" class="bg-light-gray">
         {% for post in site.posts %}
         {% if post.categories contains page.displaycategory %}
-            <a href="{{ BASE_PATH }}{{ post.url }}" class="col-sm-6">
+            <a href="{{ BASE_PATH }}{{ post.url }}" class="col-md-4 col-sm-6">
                     <img src="{{post.teaser}}" class="img-responsive" alt="{{post.title}} header image">
                 <div class="portfolio-caption">
                     <h4>{{ post.title }}</h4>
