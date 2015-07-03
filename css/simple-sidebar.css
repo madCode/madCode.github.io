@@ -115,12 +115,12 @@ a.sidebar-nav-item:focus {
     }
 
     #page-content-wrapper {
-        padding: 0 80px;
+        padding-left: 80px;
         position: relative;
     }
 
-    .page-content-wrapper-profile {
-        padding: 0 300px;
+    #page-content-wrapper-profile {
+        padding-left: 160px;
         position: relative;
     }
 
@@ -132,10 +132,11 @@ a.sidebar-nav-item:focus {
 
 /** Social Buttons **/
 
-.social {zz
+.social {
   display: inline-block;
   list-style-type: none;
-  padding: 0;
+  padding-top: 1rem;
+  padding-left: 4.5rem;
   color: #7a7a7a;
 }
 
