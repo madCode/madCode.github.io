@@ -1,9 +1,0 @@
----
-layout: portfoliopiece
-title:  "ChairVoyager"
-date:   2015-06-25 20:03:59
-category: portfolio
-tagline: "Travel the world from the comfort of your office!"
-teaser: /images/chair/header1.jpg
----
-Chair!

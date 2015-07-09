@@ -1,0 +1,96 @@
+---
+layout: default
+title:  ChairVoyager
+date:   2015-03-21 20:03:59
+category: portfolio
+tagline: How long does it take to go around the world? Some say 80 days. We think 8 minutes.
+teaser: /images/chair/header1.jpg
+tags: chair prototype
+maintag: chair
+
+video: <iframe src="https://player.vimeo.com/video/122874832" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/122874832">ChairVoyager</a> from <a href="https://vimeo.com/user21029084">Jonathan Eng</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+instructions: instructions/2015/03/21/diychair/
+hackster: https://www.hackster.io/4269/chairvoyager
+github: https://github.com/JonSEng/ChairVoyager
+---
+#The Problem
+"In this [assigment] you are challenged to
+collage a simple human power transportation technology with a novel interactive experience.
+What designs result when skateboards are equipped with accelerometers, a scooter knows it’s
+mileage, a stroller can talk, a wheelchair has superpowers?"
+
+We wanted to push the boundaries of what transportation meant. What if we played with the movement of the mind instead of just the body? With this in mind, we developed the ChairVoyager.
+
+#The Solution
+<div id="finalProductCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item"><img src="/images/coaster/header1.jpg" class=".img-responsive" alt="image of chatty coaster: a tall coaster with aluminum sides and a top with a punctuation mark design on it."></div>
+    <div class="item"><img src="/images/coaster/header2.jpg" class=".img-responsive" alt="image of chatty coaster with mug on it."></div>
+    <div class="item"><img src="/images/coaster/team1.jpg" class=".img-responsive" alt="a picture of the team"></div>
+  </div>
+  <!-- Carousel nav -->  
+  <a class="carousel-control left" href="#finalProductCarousel" data-slide="prev">‹</a>
+  <a class="carousel-control right" href="#finalProductCarousel" data-slide="next">›</a>
+</div>
+<br/>
+
+It begins as a simple office chair with an accompanying map rug. When you need a break, lean back. Push the chair over the rug. As you travel over various countries, close your eyes and listen to news stories from around the world. The chair has a color sensor on the bottom that detects which continent you are over and reads you news from that specific continent.
+
+#Brainstorm and Ideation
+
+The idea began as two separate ideas: a table that helped with awkward silences and a coaster that changed color to help keep track of how long items had been kept on it.
+
+![sketch of first ideation](/images/coaster/ideation1.jpg){: .img-responsive}
+
+We considered coasters that fit together in various ways. One option were two coasters: one used by each person in the conversation. Placing the coasters in proximity to one another or connecting them in some way would activate them. This, however, involved creating two functioning coasters, which would not work with our timeline.
+
+![sketch of second ideation](/images/coaster/ideation2.jpg){: .img-responsive}
+
+Another idea was coasters with letters of the alphabet on the side. The letters would allow individuals to keep track of their coaster. The coasters would then fit together to create an alphabet stack. A coaster that asked questions [i]and[/i] allowed people to keep track of their coasters seemed like too complex a narrative, so the idea was dropped.
+
+#Design Process
+
+The casing went through several iterations. We were very keen on a circular coaster, but creating a cylindrical shape is very difficult.
+
+We started by constructing the case using acryclic crescent moons glued together:
+
+![image of acrylic crescent version](/images/coaster/process1.jpg){: .img-responsive}
+
+Dissatisfied with the way it looked, we moved to a 3D printed version:
+
+![image of 3D printed version](/images/coaster/process3.jpg){: .img-responsive}
+
+Our final casing is a lathed aluminum pipe:
+
+![image of final version](/images/coaster/process5.jpg){: .img-responsive}
+
+The lids also went through a couple iterations. It began like this:
+
+![image of initial lids](/images/coaster/coastertest2.jpg){: .img-responsive}
+
+But we determined that the soft wood with the acrylic accents would clash with the alumnimum pipe. The final product looked like this:
+
+![image of coaster with final lids](/images/coaster/header1.jpg){: .img-responsive}
+
+#Final Design
+
+The final design, as previously discussed, involves a aluminum pipe casing. The lid is clear acrylic slightly sanded to diffuse the light of the LEDs inside. These LEDs light up when the coaster is active and listening.
+
+The inside is a tightly packed collection of electronics. We used a photosensor to detect mugs, a mic to detect sound, a few LEDs and a speaker. The LEDs were very harsh, so we used a cut sheet of paper under the lid to try and diffuse the light further.
+
+The greatest design challenge for Chatty Coaster was to keep it small while yet allowing it enough room inside to house all of the components it needed to both listen for and produce sound. These components included a speaker, a microphone, an amplifier, three LEDs, and an arduino with power source that would run all of these components. In order to arrive at our smallest model we slowly scaled down our casing, from a 6" diameter device made out of acrylic disks, to a 5" 3D-printed shell, to our final 4" device made out of milled aluminum, before scaling down the inside components to meet our new space requirements. We switched out our standard-sized arduino for an arduino mini, chose a thin speaker over a bulkier model, and soldered all of our components together on a stripboard, thinner than the breadboard we had originally planned on using.
+
+![Image of the bottom of Chatty Coaster](/images/coaster/finalcasing2.jpg){: .img-responsive}
+
+After we had a device that was suitably small we cut a hole in its base so that the sound from the speaker could be heard more clearly, and added feet to the bottom to lift the whole device off the table such that the table's natural sound-reflecting properties would aid in the device's volume.
+
+#Lessons Learned
+
+If we were to iterate on Chatty Coaster further, there are a few changes I would suggest. First of all, a photosensor is not an accurate way to detect a glass or mug, particularly in low light settings. Switching it out for a pressure sensor would be a better bet.
+
+We also did not have an off switch, given that we expected the photosensor to operate as an on and off switch. While this works in theory, having an on-off switch is preferrable if the coaster will not be used for long stretches of time.
+
+The final change I would suggest would be to upgrade the speaker. The sound quality is not too fantastic and being able to hear the questions clearly is central to the experience.
+

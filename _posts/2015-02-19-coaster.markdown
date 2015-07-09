@@ -93,3 +93,4 @@ We also did not have an off switch, given that we expected the photosensor to op
 
 The final change I would suggest would be to upgrade the speaker. The sound quality is not too fantastic and being able to hear the questions clearly is central to the experience.
 
+

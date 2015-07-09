@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: default
 title: DIY Chatty Coaster
 tags: diy coaster
 category: instructions
-tagline: Make your own chatty coaster!
+tagline: Learn to make your own.
+maintag: coaster
 ---
 The following instructions detail how Team Avacado made Chatty Coaster. As UC Berkeley students working on a class project, we had access to a variety of fancy equipment that you may not have access to. Fear not, you can modify the instructions as necessary to create your own Chatty Coaster without fancy equipment. I will detail some thoughts on how you can do that in the instructions.
 
@@ -29,11 +30,17 @@ The following instructions detail how Team Avacado made Chatty Coaster. As UC Be
 - 10 220-ohm resistors
 - 9V battery
 - LM7805 Series Transistor
+- Audio-sound breakout-WTV020SD
 
 ##Machinery Used
 - vinyl cutter
 - laser cutter
 - lathe
+
+##Code For Arduino
+The combinedCode folder contains the library for the WTV020SD sound breakout board as well as the code for the coaster itself.
+ 
+[download code from here](https://github.com/madCode/chattyCoaster/tree/master/combinedCode)
 
 ##Creating the Electronics
 These are the guts of the Chatty Coaster. No matter what the outside looks like, if you've got this, you're good to go.
