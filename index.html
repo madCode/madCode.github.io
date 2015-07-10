@@ -19,12 +19,14 @@ displaycategory: portfolio
 {% endif %}
 {% endfor %}
 </section>
-
-
-<!-- {% for post in paginator.posts %}
+<p>
+<h1>Blog Posts</h1>
+<hr>
+<section id="blog">
+{% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
+        <h2>
             {{ post.title }}
         </h2>
         {% if post.subtitle %}
@@ -33,12 +35,12 @@ displaycategory: portfolio
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+    <p class="post-meta">Posted {% if post.author != "by Madeeha Ghori"%}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
 {% endfor %}
 
-<!-- Pager 
+<!-- Pager -->
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
     {% if paginator.previous_page %}
@@ -52,4 +54,5 @@ displaycategory: portfolio
     </li>
     {% endif %}
 </ul>
-{% endif %} -->
+{% endif %}
+</section>

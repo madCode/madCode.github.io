@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: DIY Chatty Coaster
 tags: diy coaster
 category: instructions
