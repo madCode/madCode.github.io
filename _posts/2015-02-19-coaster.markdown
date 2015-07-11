@@ -5,7 +5,7 @@ date:   2015-02-19 20:03:59
 category: portfolio
 tagline: Bringing interesting conversations back to the kitchen.
 teaser: /images/coaster/header1.jpg
-header-img: images/coaster/header-img.jpg
+header-img: /images/coaster/header-img.jpg
 tags: coaster prototype
 maintag: coaster
 

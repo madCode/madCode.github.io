@@ -5,8 +5,8 @@ displaycategory: portfolio
 ---
 
 <h1>Portfolio</h1>
-<hr>
-<section id="portfolio">
+<hr/>
+<div id="portfolio">
 {% for post in site.posts %}
 {% if post.categories contains page.displaycategory %}
 <a href="{{ BASE_PATH }}{{ post.url }}" class="col-sm-4">
@@ -18,10 +18,10 @@ displaycategory: portfolio
 </a>
 {% endif %}
 {% endfor %}
-</section>
-<p>
+</div>
+<!-- <br>
 <h1>Blog Posts</h1>
-<hr>
+<hr/>
 <section id="blog">
 {% for post in paginator.posts %}
 <div class="post-preview">
@@ -40,7 +40,7 @@ displaycategory: portfolio
 <hr>
 {% endfor %}
 
-<!-- Pager -->
+<!-- Pager 
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
     {% if paginator.previous_page %}
@@ -56,3 +56,4 @@ displaycategory: portfolio
 </ul>
 {% endif %}
 </section>
+ -->
