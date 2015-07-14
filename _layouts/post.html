@@ -29,6 +29,23 @@ layout: default
 				{{ content }}
 
                 <hr>
+                <h1>Related Posts</h1>
+
+                <ul>
+                    {% for post in site.posts %}
+                    {% if post.tags contains page.maintag and post.title != page.title %}
+                    <li>
+                        <h4>
+                            <a class="related-post" href="{{post.url}}">
+                                {{post.title}} >> {{post.tagline}}
+                            </a>
+                        </h4>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+
+                <hr>
 
                 <ul class="pager">
                     {% if page.previous.url %}

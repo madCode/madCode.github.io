@@ -50,7 +50,7 @@ We considered coasters that fit together in various ways. One option were two co
 
 ![sketch of second ideation](/images/coaster/ideation2.jpg){: .img-responsive}
 
-Another idea was coasters with letters of the alphabet on the side. The letters would allow individuals to keep track of their coaster. The coasters would then fit together to create an alphabet stack. A coaster that asked questions [i]and[/i] allowed people to keep track of their coasters seemed like too complex a narrative, so the idea was dropped.
+Another idea was coasters with letters of the alphabet on the side. The letters would allow individuals to keep track of their coaster. The coasters would then fit together to create an alphabet stack. A coaster that asked questions <i>and</i> allowed people to keep track of their coasters seemed like too complex a narrative, so the idea was dropped.
 
 #Design Process
 
