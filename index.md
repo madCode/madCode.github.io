@@ -1,11 +1,11 @@
 ---
 layout: page
-description: <div class="row-fluid" style="padding-top:0rem;"><ul class="list-inline text-center"><li><a href="http://github.com/madCode/"><img id="social-button" class="img-responsive social-button" src="/images/icons/github.png" alt="github profile"></a></li><li><a href="https://www.linkedin.com/pub/madeeha-ghori/40/6b8/65b"><img id="social-button" class="img-responsive social-button" src="/images/icons/linkedin.png" alt="linkedin profile"></a></li><li><a href="https://www.hackster.io/madcode"><img id="social-button" class="img-responsive social-button" src="/images/icons/hackster.png" alt="linkedin profile"></a></li></ul></div>
+description: This is who I am.<div class="row-fluid" style="padding-top:1rem;"><ul class="list-inline text-center"><li><a href="http://github.com/madCode/"><img id="social-button" class="img-responsive social-button" src="/images/icons/github.png" alt="github profile"></a></li><li><a href="https://www.linkedin.com/pub/madeeha-ghori/40/6b8/65b"><img id="social-button" class="img-responsive social-button" src="/images/icons/linkedin.png" alt="linkedin profile"></a></li><li><a href="https://www.hackster.io/madcode"><img id="social-button" class="img-responsive social-button" src="/images/icons/hackster.png" alt="linkedin profile"></a></li></ul></div>
 displaycategory: portfolio
 ---
-<h1>This is who I am.</h1>
+<!-- <h1>This is who I am.</h1>
 <p>Ahhhhhhhh</p>
-<hr/>
+<hr/> -->
 <h1>This is what I do.</h1>
 <hr/>
 <div id="portfolio">
