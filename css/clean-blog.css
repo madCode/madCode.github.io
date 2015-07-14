@@ -1,10 +1,16 @@
-.portfolio-info a{
-  color: #239164;
-}
-
 .social-button {
   /*filter: invert(25%) sepia() saturate(100000%) hue-rotate(174deg);*/
    max-height: 5rem;
+}
+
+.footer-button {
+  /*filter: invert(25%) sepia() saturate(100000%) hue-rotate(174deg);*/
+   max-height: 5.5rem;
+   -webkit-filter: invert(80%);
+}
+
+#footer-button:hover {
+  -webkit-filter: brightness(0.5) sepia(1) hue-rotate(174deg) saturate(103.2%) brightness(103%%);
 }
 
 /*#social-button:active {
@@ -17,10 +23,6 @@
   /*-webkit-filter: invert(25%) sepia() saturate(1000000%) brightness(200%);*/
   /*hue-rotate(180deg) brightness(0.3) saturate(10000%); */
   /* hue-rotate(152deg) saturate(24.5%) brightness(71.6%);*/
-}
-
-a::hover {
-  color:#4c0000;
 }
 
 body {
@@ -50,12 +52,9 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #88a1c2;
 }
-/*a img:hover,
-a img:focus {
-  cursor: zoom-in;
-}*/
+
 blockquote {
   color: #808080;
   font-style: italic;

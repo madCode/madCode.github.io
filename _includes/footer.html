@@ -6,63 +6,26 @@
                 <ul class="list-inline text-center">
                     <li>
                         <a href="{{ "feed.xml" | prepend: site.baseurl }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                            </span>
+                            <img id="footer-button" class="img-responsive footer-button" src="/images/icons/rss.png" alt="rss feed">
                         </a>
                     </li>
-                    {% if site.twitter_username %}
                     <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
+                        <a href="http://github.com/madCode/">
+                            <img id="footer-button" class="img-responsive footer-button" src="/images/icons/github.png" alt="github profile">
                         </a>
                     </li>
-                    {% endif %}
-                    {% if site.facebook_username %}
                     <li>
-                        <a href="https://www.facebook.com/{{ site.facebook_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
+                        <a href="https://www.linkedin.com/pub/madeeha-ghori/40/6b8/65b">
+                            <img id="footer-button" class="img-responsive footer-button" src="/images/icons/linkedin.png" alt="linkedin profile">
                         </a>
                     </li>
-                    {% endif %}
-                    {% if site.github_username %}
                     <li>
-                        <a href="https://github.com/{{ site.github_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-github fa-stack-2x"></i>
-                            </span>
+                        <a href="https://www.hackster.io/madcode">
+                            <img id="footer-button" class="img-responsive footer-button" src="/images/icons/hackster.png" alt="linkedin profile">
                         </a>
                     </li>
-                    {% endif %}
-                    {% if site.linkedin %}
-                    <li>
-                        <a href="https://github.com/{{ site.github_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if site.hackster_username %}
-                    <li>
-                        <a href="https://www.hackster.io/{{ site.hackster_username }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-header fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }} v.1.1</p>
+                <p class="copyright text-muted" style="margin-top:1rem;">Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }} v.1.2</p>
             </div>
         </div>
     </div>
