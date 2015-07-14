@@ -1,3 +1,7 @@
+h1{
+  text-align: center;
+}
+
 .social-button {
   /*filter: invert(25%) sepia() saturate(100000%) hue-rotate(174deg);*/
    max-height: 5rem;
