@@ -4,7 +4,7 @@ title:  ChairVoyager
 date:   2015-03-21 20:03:59
 category: portfolio
 tagline: How long does it take to go around the world? Some say 80 days. We think 8 minutes.
-teaser: /images/chair/header1.jpg
+teaser: /images/chair/header2.jpg
 tags: chair chairvoyager prototype
 maintag: chairvoyager
 
@@ -14,7 +14,7 @@ instructions: instructions/2015/03/21/diychair/
 hackster: https://www.hackster.io/4269/chairvoyager
 github: https://github.com/JonSEng/ChairVoyager
 
-header-img: /images/chair/header2.jpg
+header-img: /images/chair/header1.jpg
 ---
 {% include portfolioheader.html %}
 

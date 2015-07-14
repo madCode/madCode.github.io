@@ -7,7 +7,7 @@ baseurl: "/"
 # url: "http://yourdomain.com"
 github_username:  madCode
 linkedin: https://www.linkedin.com/pub/madeeha-ghori/40/6b8/65b
-hackster: madcode
+hackster_username: madcode
 
 # Build settings
 markdown: kramdown
