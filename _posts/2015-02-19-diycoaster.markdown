@@ -5,6 +5,8 @@ tags: diy coaster
 category: instructions
 tagline: Learn to make your own.
 maintag: coaster
+
+header-img: /images/coaster/header-img.jpg
 ---
 The following instructions detail how Team Avacado made Chatty Coaster. As UC Berkeley students working on a class project, we had access to a variety of fancy equipment that you may not have access to. Fear not, you can modify the instructions as necessary to create your own Chatty Coaster without fancy equipment. I will detail some thoughts on how you can do that in the instructions.
 
