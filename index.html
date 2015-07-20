@@ -19,28 +19,30 @@ displaycategory: portfolio
 {% endif %}
 {% endfor %}
 </div>
-<!-- <br>
+<br>
 <h1>Blog Posts</h1>
 <hr/>
-<section id="blog">
 {% for post in paginator.posts %}
+{% if post.categories contains page.displaycategory %}
+{% else %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2>
             {{ post.title }}
         </h2>
-        {% if post.subtitle %}
+        {% if post.tagline %}
         <h3 class="post-subtitle">
-            {{ post.subtitle }}
+            {{ post.tagline }}
         </h3>
         {% endif %}
     </a>
     <p class="post-meta">Posted {% if post.author != "by Madeeha Ghori"%}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
+{% endif %}
 {% endfor %}
 
-<!-- Pager 
+<!-- Pager -->
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
     {% if paginator.previous_page %}
@@ -55,11 +57,3 @@ displaycategory: portfolio
     {% endif %}
 </ul>
 {% endif %}
-</section>
- -->
-
-
-
- <!-- <div style="padding-top:1rem"><a id="social-button" href="http://github.com/madCode/" style="padding-left:0rem"><i class="fa fa-github-square fa-2x" alt="github profile"></i></a><a id="social-button" href="https://www.linkedin.com/pub/madeeha-ghori/40/6b8/65b"><i class="fa fa-linkedin-square fa-2x social-button" alt="linkedin profile"></i></a><a id="social-button" href="https://www.hackster.io/madcode"><i class="fa fa-h-square fa-2x social-button" alt="linkedin profile"></i></a></div> -->
-
-<!-- <br><ul class="list-inline center-block"><li><a href="https://github.com/madCode"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-github fa-stack-2x"></i></span></a></li><li><a href="https://github.com/madCode"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li><li><a href="https://www.hackster.io/madcode"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-header fa-stack-1x fa-inverse"></i></span></a></li></ul> -->
