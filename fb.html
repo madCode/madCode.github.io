@@ -38,8 +38,20 @@ function myFacebookLogin() {
   FB.api('/me/feed', 'post', {message: 'Hello, world!'});
 }, {scope: 'publish_actions'});
 }
+
+function getInbox() {
+FB.api(
+    "/me/inbox",
+    function (response) {
+      if (response && !response.error) {
+        console.log(response);
+      }
+    }
+);
+}
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
+<button onclick="getInbox()">get my inbox</button>
 
 </body>
 </html>>
