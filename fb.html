@@ -30,5 +30,16 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
+<script>
+// Only works after `FB.init` is called
+function myFacebookLogin() {
+  FB.login(function(){
+  // Note: The call will only work if you accept the permission request
+  FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+}, {scope: 'publish_actions'});
+}
+</script>
+<button onclick="myFacebookLogin()">Login with Facebook</button>
+
 </body>
 </html>>
