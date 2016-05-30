@@ -11,6 +11,14 @@
       xfbml      : true,
       version    : 'v2.6'
     });
+    FB.getLoginStatus(function(response) {
+	  if (response.status === 'connected') {
+	    console.log('Logged in.');
+	  }
+	  else {
+	    FB.login();
+	  }
+	});
   };
 
   (function(d, s, id){
@@ -22,12 +30,5 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-woohoo
 </body>
 </html>>
