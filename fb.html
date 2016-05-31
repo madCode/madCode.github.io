@@ -36,7 +36,7 @@ function myFacebookLogin() {
   FB.login(function(){
   // Note: The call will only work if you accept the permission request
   FB.api('/me/feed', 'post', {message: 'Hello, world!'});
-}, {scope: 'publish_actions,user_feed'});
+}, {scope: 'publish_actions,user_posts'});
 }
 
 function getFeed() {
@@ -52,7 +52,7 @@ FB.api(
 }
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
-<button onclick="getFeed()">get my feed</button>
+<button onclick="getFeed()">get my feed 2</button>
 
 </body>
 </html>>
