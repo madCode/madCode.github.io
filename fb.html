@@ -9,8 +9,8 @@
     FB.init({
       appId      : '1077245369008098',
       xfbml      : true,
-      version    : 'v2.3'
-    });
+      version    : 'v2.6'
+    })
     FB.getLoginStatus(function(response) {
 	  if (response.status === 'connected') {
 	    console.log('Logged in.');
@@ -57,7 +57,7 @@ FB.api(
 
 function getLikes(objectId) {
   FB.api(
-      "/" + objectId + "/likes",
+      "/" + objectId + "/likes?limit=300",
       function (response) {
         if (response && !response.error) {
           /* handle the result */
@@ -74,6 +74,6 @@ function getLikes(objectId) {
 
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
-<button onclick="getFeed()">get my feed 2</button>
+<button onclick="getFeed()">get my feed 3</button>
 </body>
 </html>>
