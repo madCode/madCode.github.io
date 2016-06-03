@@ -49,33 +49,32 @@ FB.api(
       if (response && !response.error) {
         a = response;
         for (var i = 0; i < response.data.length; i++){
-          getLikes(response.data[i], "");
+          var objectId = response.data[i].id;
+          if (!posts[objectId]){
+            posts[objectId] = {};
+          }
+          posts[objectId].message = response.data[i].message;
+          getLikes(objectId, "");
         }
       }
     }
 );
 }
 
-function getLikes(object, after) {
-  var objectId = object.id
+function getLikes(objectId, after) {
   FB.api(
       "/" + objectId + "/likes" + after,
       function (response) {
-        if(objectId == "1064417560314284_1064175067005200") {
-          console.log("debugging");
-          console.log(response);
-        }
         if (response && !response.error) {
           /* handle the result */
-          if (!posts[objectId]){
-            posts[objectId] = {};
+          if (!posts[objectId].likes){
             posts[objectId].likes = [];
           }
           posts[objectId].likes = posts[objectId].likes.concat(response.data);
           if (response.paging && response.paging.next) {
             getLikes(objectId, "?after=" + response.paging.cursors.after);
           } else {
-            console.log(object.message);
+            console.log(posts[objectId].message);
             console.log(posts[objectId].likes.length);
           }
         }
