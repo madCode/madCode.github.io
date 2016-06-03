@@ -63,7 +63,7 @@ function getLikes(object, after) {
       "/" + objectId + "/likes" + after,
       function (response) {
         if(objectId == "1064417560314284_1064175067005200") {
-          console.log(object.message);
+          console.log("debugging");
           console.log(response);
         }
         if (response && !response.error) {
@@ -73,7 +73,7 @@ function getLikes(object, after) {
             posts[objectId].likes = [];
           }
           posts[objectId].likes = posts[objectId].likes.concat(response.data);
-          if (response.paging.next) {
+          if (response.paging && response.paging.next) {
             getLikes(objectId, "?after=" + response.paging.cursors.after);
           } else {
             console.log(object.message);
