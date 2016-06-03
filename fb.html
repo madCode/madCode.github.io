@@ -49,7 +49,6 @@ FB.api(
       if (response && !response.error) {
         a = response;
         for (var i = 0; i < response.data.length; i++){
-          console.log(i);
           getLikes(response.data[i], "");
         }
       }
@@ -91,6 +90,6 @@ function getLikes(object, after) {
 
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
-<button onclick="getFeed()">get my feed 1</button>
+<button onclick="getFeed()">get my feed</button>
 </body>
 </html>>
