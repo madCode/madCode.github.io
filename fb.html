@@ -44,7 +44,7 @@ function myFacebookLogin() {
 function getFeed() {
 /* make the API call */
 FB.api(
-    "/me/feed",
+    "/me/feed?limit=2",
     function (response) {
       if (response && !response.error) {
         a = response;
