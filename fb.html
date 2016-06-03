@@ -69,7 +69,7 @@ function getLikes(objectId, after) {
           if (!posts[objectId].reactions){
             posts[objectId].reactions = [];
           }
-          posts[objectId].likes = posts[objectId].reactions.concat(response.data);
+          posts[objectId].reactions = posts[objectId].reactions.concat(response.data);
           if (response.paging && response.paging.next) {
             getLikes(objectId, "?after=" + response.paging.cursors.after);
           } else {
@@ -89,6 +89,6 @@ function getLikes(objectId, after) {
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 <input id="postInput" type="text" name="number">
-<button onclick="getFeed()">get my feed 1</button>
+<button onclick="getFeed()">get my feed</button>
 </body>
 </html>>
