@@ -43,8 +43,9 @@ function myFacebookLogin() {
 
 function getFeed() {
 /* make the API call */
+var limit = document.getElementById("postInput").value;
 FB.api(
-    "/me/feed",
+    "/me/feed?limit=" + limit,
     function (response) {
       if (response && !response.error) {
         a = response;
@@ -89,6 +90,7 @@ function getLikes(objectId, after) {
 
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
-<button onclick="getFeed()">get my feed</button>
+<input id="postInput" type="text" name="number">
+<button onclick="getFeed()">get my feed 1</button>
 </body>
 </html>>
