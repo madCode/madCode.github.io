@@ -49,6 +49,7 @@ FB.api(
       if (response && !response.error) {
         a = response;
         for (var i = 0; i < response.data.length; i++){
+          console.log(i);
           getLikes(response.data[i], "");
         }
       }
@@ -61,6 +62,9 @@ function getLikes(object, after) {
   FB.api(
       "/" + objectId + "/likes" + after,
       function (response) {
+        if(objectId == "1064417560314284_1064175067005200") {
+          console.log(response);
+        }
         if (response && !response.error) {
           /* handle the result */
           if (!posts[objectId]){
@@ -86,6 +90,6 @@ function getLikes(object, after) {
 
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
-<button onclick="getFeed()">get my feed</button>
+<button onclick="getFeed()">get my feed 1</button>
 </body>
 </html>>
