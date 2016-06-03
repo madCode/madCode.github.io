@@ -31,11 +31,13 @@
 </script>
 
 <script>
+var posts = {};
+
 // Only works after `FB.init` is called
 function myFacebookLogin() {
   FB.login(function(){
   // Note: The call will only work if you accept the permission request
-  FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+  // FB.api('/me/feed', 'post', {message: 'Hello, world!'});
 }, {scope: 'publish_actions,user_posts'});
 }
 
@@ -45,14 +47,33 @@ FB.api(
     "/me/feed",
     function (response) {
       if (response && !response.error) {
-        console.log(response);
+        a = response;
+        console.log(a);
+        getLikes(a.data[0].id);
       }
     }
 );
 }
+
+function getLikes(objectId) {
+  FB.api(
+      "/" + objectId + "/likes",
+      function (response) {
+        if (response && !response.error) {
+          /* handle the result */
+          console.log(response);
+        }
+      }
+  );
+}
+
+//store: how many likes, who liked it, type
+//store: who are my friends and when did they become my friend?
+//for each post: what are the tiers of popularity for a post, avg, standard deviation, are they split into time bands
+//for a person: who likes most of my posts? Who has never liked anything?
+
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 <button onclick="getFeed()">get my feed 2</button>
-
 </body>
 </html>>
