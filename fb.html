@@ -48,8 +48,10 @@ FB.api(
     function (response) {
       if (response && !response.error) {
         a = response;
-        console.log(a.data[1].message);
-        getLikes(a.data[1].id, "");
+        for (var i = 0; i < response.data.length; i++){
+          console.log(response.data[i].message);
+          getLikes(a.data[i].id, "");
+        }
       }
     }
 );
@@ -69,7 +71,7 @@ function getLikes(objectId, after) {
           if (response.paging.next) {
             getLikes(objectId, "?after=" + response.paging.cursors.after);
           } else {
-            console.log(posts[objectId].likes);
+            console.log(posts[objectId].likes.length);
           }
         }
       }
@@ -83,6 +85,6 @@ function getLikes(objectId, after) {
 
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
-<button onclick="getFeed()">get my feed 2</button>
+<button onclick="getFeed()">get my feed 3</button>
 </body>
 </html>>
