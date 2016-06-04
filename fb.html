@@ -86,7 +86,7 @@ function recordResponse(response, pageNum) {
       posts[objectId] = {};
       posts[objectId].message = response.data[i].message;
       posts[objectId].created_time = response.data[i].created_time;
-      posts[objectId].picture = hasPicture(objectId);
+      hasPicture(objectId);
       getLikes(objectId, "");
     }
     if (response.paging && response.paging.next) {
@@ -115,12 +115,12 @@ function hasPicture(objectId) {
     "/" + objectId + "?fields=picture",
     function (response) {
       if (response && !response.error && response.picture) {
-        return 'true';
+        posts[objectId].picture = true;
       } else {
         if (response.error) {
           alert(error);
         }
-        return 'false';
+        posts[objectId].picture = false;
       }
     }
   );
