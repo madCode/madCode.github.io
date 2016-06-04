@@ -115,12 +115,12 @@ function hasPicture(objectId) {
     "/" + objectId + "?fields=picture",
     function (response) {
       if (response && !response.error && response.picture) {
-        return true;
+        return 'true';
       } else {
         if (response.error) {
           alert(error);
         }
-        return false;
+        return 'false';
       }
     }
   );
