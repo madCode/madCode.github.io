@@ -33,6 +33,23 @@
 <script>
 var posts = {};
 
+function getJSONP(url, success) {
+
+    var ud = '_' + +new Date,
+        script = document.createElement('script'),
+        head = document.getElementsByTagName('head')[0] 
+               || document.documentElement;
+
+    window[ud] = function(data) {
+        head.removeChild(script);
+        success && success(data);
+    };
+
+    script.src = url.replace('callback=?', 'callback=' + ud);
+    head.appendChild(script);
+
+}
+
 // Only works after `FB.init` is called
 function myFacebookLogin() {
   FB.login(function(){
@@ -41,11 +58,11 @@ function myFacebookLogin() {
 }, {scope: 'publish_actions,user_posts'});
 }
 
-function getFeed() {
+function getFeed(after) {
 /* make the API call */
 var limit = document.getElementById("postInput").value;
 FB.api(
-    "/me/feed?limit=" + limit,
+    "/me/feed?limit=" + limit + "&after=" + after,
     function (response) {
       if (response && !response.error) {
         a = response;
@@ -55,9 +72,17 @@ FB.api(
           posts[objectId].message = response.data[i].message;
           getLikes(objectId, "");
         }
+        if (response.paging.next) {
+          getJSONP(response.paging.next, function(data){
+            console.log("next page of data");
+            console.log(data);
+            });  
+        }
       }
     }
-);
+);}}
+
+
 }
 
 function getLikes(objectId, after) {
@@ -89,6 +114,6 @@ function getLikes(objectId, after) {
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 <input id="postInput" type="text" name="number">
-<button onclick="getFeed()">get my feed</button>
+<button onclick="getFeed()">get my feed 1</button>
 </body>
 </html>>
