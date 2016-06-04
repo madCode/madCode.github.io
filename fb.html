@@ -37,6 +37,7 @@
 
 <script>
 var posts = {};
+var postList = [];
 
 var getJSON = function(url, callback) {
     var xhr = new XMLHttpRequest();
@@ -84,10 +85,13 @@ function recordResponse(response, pageNum) {
       a = response;
       var objectId = response.data[i].id;
       posts[objectId] = {};
+      //this might be able to go
+      posts[objectId].id = objectId;
       posts[objectId].message = response.data[i].message;
       posts[objectId].created_time = response.data[i].created_time;
       hasPicture(objectId);
       getLikes(objectId, "");
+      postList.push(posts[objectId]);
     }
     if (response.paging && response.paging.next) {
       if (pageNum % 20 == 0) {
@@ -130,11 +134,11 @@ function getLikes(objectId, after) {
   FB.api(
       "/" + objectId + "/reactions" + after,
       function (response) {
+        if (!posts[objectId].reactions){
+            posts[objectId].reactions = [];
+        }
         if (response && !response.error) {
           /* handle the result */
-          if (!posts[objectId].reactions){
-            posts[objectId].reactions = [];
-          }
           posts[objectId].reactions = posts[objectId].reactions.concat(response.data);
           if (response.paging && response.paging.next) {
             getLikes(objectId, "?after=" + response.paging.cursors.after);
@@ -207,6 +211,22 @@ function standardDeviationBelowPosts(avg, stdDev, num, min) {
   return results;
 }
 
+function lowestPercentOfPosts(percent) {
+  var keys = Object.keys(posts);
+  var total = keys.length;
+  var results = [];
+  var index = total * percent / 100;
+  postList.sort(function(a, b) {
+    return parseFloat(a.responses.length) - parseFloat(b.responses.length);
+  });
+
+  for (var i = 0; i <= index; i++) {
+    var post = posts[keys[i]];
+    results.push(keys[i]);        
+  }
+  return results;
+}
+
 function concatPosts(postIdList) {
   var resultString = "";
   for (var i=0; i < postIdList.length; i++){
@@ -269,6 +289,12 @@ function analyzePosts() {
   console.log("3b std");
   console.log(stdb);
 
+  var low10 = lowestPercentOfPosts(10);
+  document.getElementById("low-10").innerHTML = low10.length;
+  document.getElementById("low-10-posts").innerHTML = concatPosts(low10);
+  console.log("low10");
+  console.log(low10);
+
 }
 
 // graph: average number of likes, standard deviation
@@ -308,5 +334,9 @@ function analyzePosts() {
 <h1>Posts More Than 2 Standard Deviations Below Average</h1>
 <div id="stdb-num"></div><br/>
 <div class="post-list" id="stdb-posts"></div><br/>
+
+<h1>Lowest 10% of Posts</h1>
+<div id="low-10"></div><br/>
+<div class="post-list" id="low-10-posts"></div><br/>
 </body>
 </html>
