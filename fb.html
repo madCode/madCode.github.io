@@ -125,7 +125,14 @@ function averageReactions() {
   var total = keys.length;
   var sum = 0;
   for (var i = 0; i < total; i++) {
-    sum += posts[keys[i]].reactions.length;
+    try {
+      sum += posts[keys[i]].reactions.length;
+    } catch (err) {
+      console.log(err);
+      console.log(i);
+      debugger;
+    }
+    
   }
   return float(sum/total);
 }
