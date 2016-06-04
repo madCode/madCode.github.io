@@ -171,7 +171,14 @@ function concatPosts(postIdList) {
   var resultString = "";
   for (var i=0; i < postIdList.length; i++){
     var post = posts[postIdList[i]];
-    resultString += post.message + "\n";
+    try {
+      resultString += post.message + "\n";
+    }
+    catch (err) {
+      console.log("in concatPosts");
+      console.log(err);
+      console.log(post);
+    }
   }
   return resultString;
 }
@@ -213,8 +220,8 @@ function analyzePosts() {
 
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
-<input id="start" type="text">From</input>
-<input id="until" type="text">To</input>
+<input id="start" type="text" hint="From" value="1420070400">
+<input id="until" type="text" hint="To" value="1451606400">
 <button onclick="getFeed()">get my feed</button>
 <h1 id="avg-title">Average Number of Likes: </h1>
 <div id="avg-value"></div>
