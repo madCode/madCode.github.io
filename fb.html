@@ -62,11 +62,11 @@ var limit = document.getElementById("postInput").value;
 FB.api(
     "/me/feed?limit=" + limit + "&after=" + after,
     function (response) {
-      recordResponse(response);
+      recordResponse(response, 1);
     }
 );}
 
-function recordResponse(response) {
+function recordResponse(response, pageNum) {
   if (response && response.error) {
     alert("Something went wrong: " + response.error);
     console.log(response.error);
@@ -78,13 +78,14 @@ function recordResponse(response) {
       posts[objectId].message = response.data[i].message;
       getLikes(objectId, "");
     }
-    if (response.paging.next) {
+    if (response.paging && response.paging.next) {
+      console.log("Finished page " + pageNum);
       getJSON(response.paging.next,
       function(err, data) {
         if (err != null) {
           alert("Something went wrong: " + err);
         } else {
-          recordResponse(data);
+          recordResponse(data, pageNum + 1);
         }
       }); 
     } else {
