@@ -214,7 +214,7 @@ function concatPosts(postIdList) {
     try {
       resultString += post.message + 
           "\n NUMBER OF REACTIONS:" + post.reactions.length + 
-          "\n HAS PICTURE:" + post.picture + "\n";
+          "\n HAS PICTURE:" + post.picture + "\n\n";
     }
     catch (err) {
       console.log("in concatPosts");
@@ -281,8 +281,8 @@ function analyzePosts() {
 
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
-<input id="start" type="text" hint="From" value="1420070400">
-<input id="until" type="text" hint="To" value="1451606400">
+<input id="start" type="text" hint="From" value="1451606400">
+<input id="until" type="text" hint="To" value="">
 <button onclick="getFeed()">get my feed</button>
 <h1 id="avg-title">Average Number of Likes: </h1>
 <div id="avg-value"></div>
@@ -301,7 +301,7 @@ function analyzePosts() {
 
 <h1>Posts 1 Standard Deviation Below Average</h1>
 <div id="std-1b-num"></div><br/>
-<div class="post-list" id="std-1-posts"></div><br/>
+<div class="post-list" id="std-1b-posts"></div><br/>
 <h1>Posts 2 Standard Deviations Below Average</h1>
 <div id="std-2b-num"></div><br/>
 <div class="post-list" id="std-2-posts"></div><br/>
