@@ -79,7 +79,9 @@ function recordResponse(response, pageNum) {
       getLikes(objectId, "");
     }
     if (response.paging && response.paging.next) {
-      console.log("Finished page " + pageNum);
+      if (pageNum % 20 == 0) {
+        console.log("Finished page " + pageNum);        
+      }
       getJSON(response.paging.next,
       function(err, data) {
         if (err != null) {
@@ -130,7 +132,7 @@ function averageReactions() {
 
 function analyzePosts() {
   var avg = document.getElementById("avg-title");
-  var avgNum = d1.insertAdjacentHTML('afterend', averageReactions());
+  var avgNum = avg.insertAdjacentHTML('afterend', averageReactions());
 }
 
 // graph: average number of likes, standard deviation
