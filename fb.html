@@ -62,27 +62,38 @@ var limit = document.getElementById("postInput").value;
 FB.api(
     "/me/feed?limit=" + limit + "&after=" + after,
     function (response) {
-      if (response && !response.error) {
-        a = response;
-        for (var i = 0; i < response.data.length; i++){
-          var objectId = response.data[i].id;
-          posts[objectId] = {};
-          posts[objectId].message = response.data[i].message;
-          getLikes(objectId, "");
-        }
-        if (response.paging.next) {
-          getJSON(response.paging.next,
-          function(err, data) {
-            if (err != null) {
-              alert("Something went wrong: " + err);
-            } else {
-              console.log(data);
-            }
-          }); 
-        }
-      }
+      recordResponse(response);
     }
 );}
+
+function recordResponse(response) {
+  if (response && response.error) {
+    alert("Something went wrong: " + response.error);
+    console.log(response.error);
+  }
+  if (response && !response.error) {
+    for (var i = 0; i < response.data.length; i++){
+      var objectId = response.data[i].id;
+      posts[objectId] = {};
+      posts[objectId].message = response.data[i].message;
+      getLikes(objectId, "");
+    }
+    if (response.paging.next) {
+      getJSON(response.paging.next,
+      function(err, data) {
+        if (err != null) {
+          alert("Something went wrong: " + err);
+        } else {
+          recordResponse(data);
+        }
+      }); 
+    } else {
+      alert("Finished! Found " + Object.keys(posts).length + 
+        " posts!");
+    }
+  }
+
+}
 
 function getLikes(objectId, after) {
   FB.api(
@@ -113,6 +124,6 @@ function getLikes(objectId, after) {
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 <input id="postInput" type="text" name="number">
-<button onclick="getFeed('')">get my feed 1</button>
+<button onclick="getFeed()">get my feed</button>
 </body>
 </html>>
