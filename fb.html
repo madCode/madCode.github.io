@@ -137,9 +137,28 @@ function averageReactions() {
   return sum/total;
 }
 
+function standardDeviation(average) {
+  var keys = Object.keys(posts);
+  var total = keys.length;
+  var sum = 0;
+  for (var i = 0; i < total; i++) {
+    var post = posts[keys[i]];
+    if (post.reactions) {
+      sum += Math.pow(post.reactions.length - average, 2);
+    }    
+  }
+  return Math.sqrt(sum/(total - 1));
+}
+
 function analyzePosts() {
   var avg = document.getElementById("avg-title");
-  var avgNum = avg.insertAdjacentHTML('afterend', averageReactions());
+  var avgNum = averageReactions();
+  avg.insertAdjacentHTML('afterend', avgNum);
+
+  var std = document.getElementById("std-title");
+  var stdDev = standardDeviation(avgNum);
+  std.insertAdjacentHTML('afterend', stdDev);
+
 }
 
 // graph: average number of likes, standard deviation
@@ -155,5 +174,6 @@ function analyzePosts() {
 <input id="postInput" type="text" name="number">
 <button onclick="getFeed()">get my feed</button>
 <h1 id="avg-title">Average Number of Likes: </h1>
+<h1 id="std-title">Standard Deviation of Likes: </h1>
 </body>
 </html>>
