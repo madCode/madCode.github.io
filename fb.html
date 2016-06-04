@@ -71,6 +71,7 @@ FB.api(
     "/me/feed?since=" + timestampStart + "&until=" + timestampEnd,
     function (response) {
       posts = {};
+      postList = [];
       recordResponse(response, 1);
     }
 );}
