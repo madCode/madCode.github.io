@@ -91,6 +91,7 @@ function recordResponse(response, pageNum) {
     } else {
       alert("Finished! Found " + Object.keys(posts).length + 
         " posts!");
+      analyzePosts();
     }
   }
 
@@ -117,6 +118,24 @@ function getLikes(objectId, after) {
   );
 }
 
+function averageReactions() {
+  var keys = Object.keys(posts);
+  var total = keys.length;
+  var sum = 0;
+  for (var i = 0; i < total; i++) {
+    sum += posts[keys[i]].reactions.length;
+  }
+  return float(sum/total);
+}
+
+function analyzePosts() {
+  var avg = document.getElementById("avg-title");
+  var avgNum = d1.insertAdjacentHTML('afterend', averageReactions());
+}
+
+// graph: average number of likes, standard deviation
+
+
 //store: how many likes, who liked it, type
 //store: who are my friends and when did they become my friend?
 //for each post: what are the tiers of popularity for a post, avg, standard deviation, are they split into time bands
@@ -126,5 +145,6 @@ function getLikes(objectId, after) {
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 <input id="postInput" type="text" name="number">
 <button onclick="getFeed()">get my feed</button>
+<h1 id="avg-title">Average Number of Likes: </h1>
 </body>
 </html>>
