@@ -87,6 +87,8 @@ function recordResponse(response, pageNum) {
       posts[objectId] = {};
       //this might be able to go
       posts[objectId].id = objectId;
+      //comment out line below to find bug
+      posts[objectId].reactions = [];
       posts[objectId].message = response.data[i].message;
       posts[objectId].created_time = response.data[i].created_time;
       hasPicture(objectId);
