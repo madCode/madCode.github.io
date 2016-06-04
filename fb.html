@@ -223,8 +223,7 @@ function lowestPercentOfPosts(percent) {
   });
 
   for (var i = 0; i <= index; i++) {
-    var post = posts[keys[i]];
-    results.push(keys[i]);        
+    results.push(postList[i].id);        
   }
   return results;
 }
