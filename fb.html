@@ -153,13 +153,11 @@ function standardDeviation(average) {
 }
 
 function analyzePosts() {
-  var avg = document.getElementById("avg-title");
   var avgNum = averageReactions();
-  avg.insertAdjacentHTML('afterend', avgNum);
+  document.getElementById("avg-value").innerHTML = avgNum;
 
-  var std = document.getElementById("std-title");
   var stdDev = standardDeviation(avgNum);
-  std.insertAdjacentHTML('afterend', stdDev);
+  document.getElementById("std-value").innerHTML = stdDev;
 
 }
 
@@ -177,6 +175,8 @@ function analyzePosts() {
 <input id="until" type="text">To</input>
 <button onclick="getFeed()">get my feed</button>
 <h1 id="avg-title">Average Number of Likes: </h1>
+<div id="avg-value"></div>
 <h1 id="std-title">Standard Deviation of Likes: </h1>
+<div id="std-value"></div>
 </body>
 </html>>
