@@ -156,7 +156,7 @@ function standardDeviationPosts(avg, stdDev, num, max) {
   //for post, if it has more than num*stdDev likes, add it
   var keys = Object.keys(posts);
   var results = [];
-  for (var i = 0; i < total; i++) {
+  for (var i = 0; i < keys.length; i++) {
     var post = posts[keys[i]];
     if (post.reactions && post.reactions.length > avg + stdDev*num) {
       if (!max || (max && post.reactions.length < avg + stdDev*(max))){
