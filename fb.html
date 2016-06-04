@@ -69,6 +69,7 @@ var timestampEnd = document.getElementById("until").value;
 FB.api(
     "/me/feed?since=" + timestampStart + "&until=" + timestampEnd,
     function (response) {
+      posts = {};
       recordResponse(response, 1);
     }
 );}
@@ -80,6 +81,7 @@ function recordResponse(response, pageNum) {
   }
   if (response && !response.error) {
     for (var i = 0; i < response.data.length; i++){
+      a = response;
       var objectId = response.data[i].id;
       posts[objectId] = {};
       posts[objectId].message = response.data[i].message;
