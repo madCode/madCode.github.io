@@ -33,22 +33,20 @@
 <script>
 var posts = {};
 
-function getJSONP(url, success) {
-
-    var ud = '_' + +new Date,
-        script = document.createElement('script'),
-        head = document.getElementsByTagName('head')[0] 
-               || document.documentElement;
-
-    window[ud] = function(data) {
-        head.removeChild(script);
-        success && success(data);
+var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", url, true);
+    xhr.responseType = "json";
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status == 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status);
+      }
     };
-
-    script.src = url.replace('callback=?', 'callback=' + ud);
-    head.appendChild(script);
-
-}
+    xhr.send();
+};
 
 // Only works after `FB.init` is called
 function myFacebookLogin() {
@@ -73,10 +71,14 @@ FB.api(
           getLikes(objectId, "");
         }
         if (response.paging.next) {
-          getJSONP(response.paging.next, function(data){
-            console.log("next page of data");
-            console.log(data);
-            });  
+          getJSON(response.paging.next,
+          function(err, data) {
+            if (err != null) {
+              alert("Something went wrong: " + err);
+            } else {
+              alert("Your query count: " + data.query.count);
+            }
+          }); 
         }
       }
     }
@@ -95,8 +97,8 @@ function getLikes(objectId, after) {
           if (response.paging && response.paging.next) {
             getLikes(objectId, "?after=" + response.paging.cursors.after);
           } else {
-            console.log(posts[objectId].message);
-            console.log(posts[objectId].reactions.length);
+            //console.log(posts[objectId].message);
+            //console.log(posts[objectId].reactions.length);
           }
         }
       }
@@ -111,6 +113,6 @@ function getLikes(objectId, after) {
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
 <input id="postInput" type="text" name="number">
-<button onclick="getFeed('')">get my feed</button>
+<button onclick="getFeed('')">get my feed 1</button>
 </body>
 </html>>
