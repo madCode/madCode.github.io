@@ -56,11 +56,13 @@ function myFacebookLogin() {
 }, {scope: 'publish_actions,user_posts'});
 }
 
-function getFeed(after) {
+function getFeed() {
 /* make the API call */
-var limit = document.getElementById("postInput").value;
+var timestampStart = document.getElementById("start").value;
+var timestampEnd = document.getElementById("until").value;
+
 FB.api(
-    "/me/feed?limit=" + limit + "&after=" + after,
+    "/me/feed?since=" + timestampStart + "&until=" + timestampEnd,
     function (response) {
       recordResponse(response, 1);
     }
@@ -171,7 +173,8 @@ function analyzePosts() {
 
 </script>
 <button onclick="myFacebookLogin()">Login with Facebook</button>
-<input id="postInput" type="text" name="number">
+<input id="start" type="text">From</input>
+<input id="until" type="text">To</input>
 <button onclick="getFeed()">get my feed</button>
 <h1 id="avg-title">Average Number of Likes: </h1>
 <h1 id="std-title">Standard Deviation of Likes: </h1>
