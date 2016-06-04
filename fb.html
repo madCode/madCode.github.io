@@ -2,6 +2,11 @@
 <html>
 <head>
 	<title></title>
+  <style>
+  body {
+    white-space: pre-wrap;
+  }
+  </style>
 </head>
 <body>
 <script>
@@ -172,7 +177,7 @@ function concatPosts(postIdList) {
   for (var i=0; i < postIdList.length; i++){
     var post = posts[postIdList[i]];
     try {
-      resultString += post.message + "\n";
+      resultString += post.message + "\n NUMBER OF REACTIONS:" + post.reactions.length + "\n";
     }
     catch (err) {
       console.log("in concatPosts");
@@ -192,7 +197,7 @@ function analyzePosts() {
   document.getElementById("std-value").innerHTML = stdDev;
 
   var std1 = standardDeviationPosts(avgNum, stdDev, 1, 2);
-  document.getElementById("std-1-num").innerHTML = std1;
+  document.getElementById("std-1-num").innerHTML = std1.length;
   document.getElementById("std-1-posts").innerHTML = concatPosts(std1);
   console.log("1 std");
   console.log(std1);
