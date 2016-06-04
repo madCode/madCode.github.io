@@ -85,6 +85,8 @@ function recordResponse(response, pageNum) {
       var objectId = response.data[i].id;
       posts[objectId] = {};
       posts[objectId].message = response.data[i].message;
+      posts[objectId].created_time = response.data[i].created_time;
+      posts[objectId].picture = hasPicture(objectId);
       getLikes(objectId, "");
     }
     if (response.paging && response.paging.next) {
@@ -106,6 +108,22 @@ function recordResponse(response, pageNum) {
     }
   }
 
+}
+
+function hasPicture(objectId) {
+  FB.api(
+    "/" + objectId + "?fields=picture",
+    function (response) {
+      if (response && !response.error && response.picture) {
+        return true;
+      } else {
+        if (response.error) {
+          alert(error);
+        }
+        return false;
+      }
+    }
+  );
 }
 
 function getLikes(objectId, after) {
@@ -159,14 +177,29 @@ function standardDeviation(average) {
   return Math.sqrt(sum/(total - 1));
 }
 
-function standardDeviationPosts(avg, stdDev, num, max) {
+function standardDeviationAbovePosts(avg, stdDev, num, max) {
   //for post, if it has more than num*stdDev likes, add it
   var keys = Object.keys(posts);
   var results = [];
   for (var i = 0; i < keys.length; i++) {
     var post = posts[keys[i]];
     if (post.reactions && post.reactions.length > avg + stdDev*num) {
-      if (!max || (max && post.reactions.length < avg + stdDev*(max))){
+      if (!max || (max && post.reactions.length < avg + stdDev*max)){
+        results.push(keys[i]);        
+      }
+    }    
+  }
+  return results;
+}
+
+function standardDeviationBelowPosts(avg, stdDev, num, min) {
+  //for post, if it has more than num*stdDev likes, add it
+  var keys = Object.keys(posts);
+  var results = [];
+  for (var i = 0; i < keys.length; i++) {
+    var post = posts[keys[i]];
+    if (post.reactions && post.reactions.length < avg - stdDev*num) {
+      if (!max || (max && post.reactions.length > avg - stdDev*max)){
         results.push(keys[i]);        
       }
     }    
@@ -179,7 +212,9 @@ function concatPosts(postIdList) {
   for (var i=0; i < postIdList.length; i++){
     var post = posts[postIdList[i]];
     try {
-      resultString += post.message + "\n NUMBER OF REACTIONS:" + post.reactions.length + "\n";
+      resultString += post.message + 
+          "\n NUMBER OF REACTIONS:" + post.reactions.length + 
+          "\n HAS PICTURE:" + post.picture + "\n";
     }
     catch (err) {
       console.log("in concatPosts");
@@ -198,23 +233,41 @@ function analyzePosts() {
   var stdDev = standardDeviation(avgNum);
   document.getElementById("std-value").innerHTML = stdDev;
 
-  var std1 = standardDeviationPosts(avgNum, stdDev, 1, 2);
+  var std1 = standardDeviationAbovePosts(avgNum, stdDev, 1, 2);
   document.getElementById("std-1-num").innerHTML = std1.length;
   document.getElementById("std-1-posts").innerHTML = concatPosts(std1);
   console.log("1 std");
   console.log(std1);
 
-  var std2 = standardDeviationPosts(avgNum, stdDev, 2, 3);
+  var std2 = standardDeviationAbovePosts(avgNum, stdDev, 2, 3);
   document.getElementById("std-2-num").innerHTML = std2.length;
   document.getElementById("std-2-posts").innerHTML = concatPosts(std2);
   console.log("2 std");
   console.log(std2);
 
-  var std = standardDeviationPosts(avgNum, stdDev, 3);
+  var std = standardDeviationAbovePosts(avgNum, stdDev, 3);
   document.getElementById("std-num").innerHTML = std.length;
   document.getElementById("std-posts").innerHTML = concatPosts(std);
   console.log("3+ std");
   console.log(std);
+
+  var std1b = standardDeviationBelowPosts(avgNum, stdDev, 2, 1);
+  document.getElementById("std-1b-num").innerHTML = std1b.length;
+  document.getElementById("std-1b-posts").innerHTML = concatPosts(std1b);
+  console.log("1b std");
+  console.log(std1b);
+
+  var std2b = standardDeviationBelowPosts(avgNum, stdDev, 3, 2);
+  document.getElementById("std-2b-num").innerHTML = std2b.length;
+  document.getElementById("std-2b-posts").innerHTML = concatPosts(std2);
+  console.log("2b std");
+  console.log(std2b);
+
+  var stdb = standardDeviationBelowPosts(avgNum, stdDev, 3);
+  document.getElementById("stdb-num").innerHTML = stdb.length;
+  document.getElementById("stdb-posts").innerHTML = concatPosts(stdb);
+  console.log("3b std");
+  console.log(stdb);
 
 }
 
@@ -235,14 +288,25 @@ function analyzePosts() {
 <div id="avg-value"></div>
 <h1 id="std-title">Standard Deviation of Likes: </h1>
 <div id="std-value"></div>
+
 <h1>Posts 1 Standard Deviation Above Average</h1>
-<div id="std-1-num"></div>
+<div id="std-1-num"></div><br/>
 <div class="post-list" id="std-1-posts"></div>
 <h1>Posts 2 Standard Deviations Above Average</h1>
-<div id="std-2-num"></div>
+<div id="std-2-num"></div><br/>
 <div class="post-list" id="std-2-posts"></div>
 <h1>Posts More Than 2 Standard Deviations Above Average</h1>
-<div id="std-num"></div>
+<div id="std-num"></div><br/>
 <div class="post-list" id="std-posts"></div>
+
+<h1>Posts 1 Standard Deviation Below Average</h1>
+<div id="std-1b-num"></div><br/>
+<div class="post-list" id="std-1-posts"></div><br/>
+<h1>Posts 2 Standard Deviations Below Average</h1>
+<div id="std-2b-num"></div><br/>
+<div class="post-list" id="std-2-posts"></div><br/>
+<h1>Posts More Than 2 Standard Deviations Below Average</h1>
+<div id="stdb-num"></div><br/>
+<div class="post-list" id="stdb-posts"></div><br/>
 </body>
 </html>
