@@ -178,6 +178,7 @@ function concatPosts(postIdList) {
       console.log("in concatPosts");
       console.log(err);
       console.log(post);
+      debugger;
     }
   }
   return resultString;
@@ -191,8 +192,8 @@ function analyzePosts() {
   document.getElementById("std-value").innerHTML = stdDev;
 
   var std1 = standardDeviationPosts(avgNum, stdDev, 1, 2);
-  document.getElementById("std-1-num").innerHTML = std1[0];
-  document.getElementById("std-1-posts").innerHTML = concatPosts(std1[1]);
+  document.getElementById("std-1-num").innerHTML = std1;
+  document.getElementById("std-1-posts").innerHTML = concatPosts(std1);
   console.log("1 std");
   console.log(std1);
 
