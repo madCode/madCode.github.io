@@ -76,6 +76,17 @@ FB.api(
     }
 );}
 
+function getPost() {
+  FB.api(
+    "/"+document.getElementById("post_id"),
+    function (response) {
+      posts = {};
+      postList = [];
+      recordResponse(response, 1);
+    }
+  );
+}
+
 function recordResponse(response, pageNum) {
   if (response && response.error) {
     alert("Something went wrong: " + response.error);
@@ -312,6 +323,10 @@ function analyzePosts() {
 <input id="start" type="text" hint="From" value="1451606400">
 <input id="until" type="text" hint="To" value="">
 <button onclick="getFeed()">get my feed</button>
+
+<input id="post_id">
+<button onclick="getPost()">get post</button>
+
 <h1 id="avg-title">Average Number of Likes: </h1>
 <div id="avg-value"></div>
 <h1 id="std-title">Standard Deviation of Likes: </h1>
