@@ -78,7 +78,7 @@ FB.api(
 
 function getPost() {
   FB.api(
-    "/"+document.getElementById("post_id"),
+    "/"+document.getElementById("post_id").value,
     function (response) {
       posts = {};
       postList = [];
