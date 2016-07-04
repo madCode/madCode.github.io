@@ -82,7 +82,7 @@ function getPost() {
     function (response) {
       posts = {};
       postList = [];
-      recordResponse(response, 1);
+      recordSinglePost(response);
     }
   );
 }
