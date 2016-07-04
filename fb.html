@@ -87,6 +87,25 @@ function getPost() {
   );
 }
 
+function recordSinglePost(response) {
+  if (response && response.error) {
+    alert("Something went wrong: " + response.error);
+    console.log(response.error);
+  }
+  if (response && !response.error) {
+    var objectId = response.id;
+    posts[objectId] = {};
+    //this might be able to go
+    posts[objectId].id = objectId;
+    //comment out line below to find bug
+    posts[objectId].reactions = [];
+    posts[objectId].message = response.message;
+    posts[objectId].created_time = response.created_time;
+    hasPicture(objectId);
+    getLikes(objectId, "");
+    postList.push(posts[objectId]);
+}
+
 function recordResponse(response, pageNum) {
   if (response && response.error) {
     alert("Something went wrong: " + response.error);
