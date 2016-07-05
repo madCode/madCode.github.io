@@ -76,12 +76,15 @@ FB.api(
     }
 );}
 
-function getPost() {
+function getPost(postId) {
+  if (!postId) {
+    postId = document.getElementById("post_id").value;
+  }
   FB.api(
-    "/"+document.getElementById("post_id").value,
+    "/"+ postId,
     function (response) {
-      posts = {};
-      postList = [];
+      //posts = {};
+      //postList = [];
       recordSinglePost(response);
     }
   );
@@ -146,6 +149,15 @@ function recordResponse(response, pageNum) {
     }
   }
 
+}
+
+function checkPosts() {
+  for (var i=0; i < postList.length; i++) {
+    var post = postList[i];
+    if (!post.message) {
+      getPost(post.id);
+    }
+  }
 }
 
 function hasPicture(objectId) {
