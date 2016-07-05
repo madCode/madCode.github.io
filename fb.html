@@ -186,15 +186,14 @@ function getLikes(objectId, after) {
 }
 
 function averageReactions() {
-  var keys = Object.keys(posts);
-  var total = keys.length;
+  var total = postList.length;
   var sum = 0;
   for (var i = 0; i < total; i++) {
     try {
-      sum += posts[keys[i]].reactions.length;
+      sum += postList[i].reactions.length;
     } catch (err) {
       console.log(err);
-      console.log(keys[i]);
+      console.log(postList[i].id);
       // debugger;
     }
     
@@ -203,11 +202,10 @@ function averageReactions() {
 }
 
 function standardDeviation(average) {
-  var keys = Object.keys(posts);
-  var total = keys.length;
+  var total = postList.length;
   var sum = 0;
   for (var i = 0; i < total; i++) {
-    var post = posts[keys[i]];
+    var post = postList[i];
     if (post.reactions) {
       sum += Math.pow(post.reactions.length - average, 2);
     }    
@@ -375,5 +373,19 @@ function analyzePosts() {
 <h1>Lowest 10% of Posts</h1>
 <div id="low-10"></div><br/>
 <div class="post-list" id="low-10-posts"></div><br/>
+
+<h1>Questions to Answer</h1>
+<ul>
+  <li>What kind of posts get me the most likes?</li>
+    <ul>
+      <li>Do photos matter?</li>
+      <li>Humor?</li>
+      <li>Seriousness?</li>
+      <li>Who is tagged in the post?</li>
+      <li>How many people have access to see each post anyway?</li>
+      <li>Can I take into account how many friends I had at the time or no?</li>
+    </ul>
+  <li>Who is actually paying attention to what I post?</li>
+</ul>
 </body>
 </html>
