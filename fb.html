@@ -152,12 +152,11 @@ function recordResponse(response, pageNum) {
 }
 
 function checkPosts() {
-  for (var i=0; i < postSet.size; i++) {
-    var post = postSet[i];
+  postSet.forEach(function(post) {
     if (!post.message) {
       getPost(post.id);
     }
-  }
+  })
 }
 
 function hasPicture(objectId) {
