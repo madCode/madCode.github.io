@@ -253,9 +253,17 @@ function lowestPercentOfPosts(percent) {
   var total = keys.length;
   var results = [];
   var index = total * percent / 100;
-  var postList = Array.from(postSet).sort(function(a, b) {
+  try {
+    var postList = Array.from(postSet);
+  } catch (err) {
+    var postList = [];
+    postSet.forEach(function(post) {
+      postList.push(post);
+    });
+  }
+  postList = postList.sort(function(a, b) {
     return parseFloat(a.reactions.length) - parseFloat(b.reactions.length);
-  });
+    });
 
   for (var i = 0; i <= index; i++) {
     results.push(postList[i].id);        
