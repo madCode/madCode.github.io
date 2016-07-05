@@ -37,7 +37,7 @@
 
 <script>
 var posts = {};
-var postList = [];
+var postSet = new Set();
 
 var getJSON = function(url, callback) {
     var xhr = new XMLHttpRequest();
@@ -71,7 +71,7 @@ FB.api(
     "/me/feed?since=" + timestampStart + "&until=" + timestampEnd,
     function (response) {
       posts = {};
-      postList = [];
+      postSet = new Set();
       recordResponse(response, 1);
     }
 );}
@@ -84,7 +84,7 @@ function getPost(postId) {
     "/"+ postId,
     function (response) {
       //posts = {};
-      //postList = [];
+      //postSet = [];
       recordSinglePost(response);
     }
   );
@@ -106,7 +106,7 @@ function recordSinglePost(response) {
     posts[objectId].created_time = response.created_time;
     hasPicture(objectId);
     getLikes(objectId, "");
-    postList.push(posts[objectId]);
+    postSet.add(posts[objectId]);
   }
 }
 
@@ -128,7 +128,7 @@ function recordResponse(response, pageNum) {
       posts[objectId].created_time = response.data[i].created_time;
       hasPicture(objectId);
       getLikes(objectId, "");
-      postList.push(posts[objectId]);
+      postSet.add(posts[objectId]);
     }
     if (response.paging && response.paging.next) {
       if (pageNum % 20 == 0) {
@@ -152,8 +152,8 @@ function recordResponse(response, pageNum) {
 }
 
 function checkPosts() {
-  for (var i=0; i < postList.length; i++) {
-    var post = postList[i];
+  for (var i=0; i < postSet.size; i++) {
+    var post = postSet[i];
     if (!post.message) {
       getPost(post.id);
     }
@@ -198,60 +198,54 @@ function getLikes(objectId, after) {
 }
 
 function averageReactions() {
-  var total = postList.length;
+  var total = postSet.size;
   var sum = 0;
-  for (var i = 0; i < total; i++) {
+  postSet.forEach(function(post) {
     try {
-      sum += postList[i].reactions.length;
+      sum += post.reactions.length;
     } catch (err) {
       console.log(err);
-      console.log(postList[i].id);
+      console.log(post.id);
       // debugger;
     }
-    
-  }
+  })
   return sum/total;
 }
 
 function standardDeviation(average) {
-  var total = postList.length;
+  var total = postSet.size;
   var sum = 0;
-  for (var i = 0; i < total; i++) {
-    var post = postList[i];
+  postSet.forEach(function(post) {
     if (post.reactions) {
       sum += Math.pow(post.reactions.length - average, 2);
-    }    
-  }
+    }
+  })
   return Math.sqrt(sum/(total - 1));
 }
 
 function standardDeviationAbovePosts(avg, stdDev, num, max) {
   //for post, if it has more than num*stdDev likes, add it
-  var keys = Object.keys(posts);
   var results = [];
-  for (var i = 0; i < keys.length; i++) {
-    var post = posts[keys[i]];
+  postSet.forEach(function(post) {
     if (post.reactions && post.reactions.length > avg + stdDev*num) {
       if (!max || (max && post.reactions.length < avg + stdDev*max)){
         results.push(keys[i]);        
       }
     }    
-  }
+  })
   return results;
 }
 
 function standardDeviationBelowPosts(avg, stdDev, num, min) {
   //for post, if it has more than num*stdDev likes, add it
-  var keys = Object.keys(posts);
   var results = [];
-  for (var i = 0; i < keys.length; i++) {
-    var post = posts[keys[i]];
+  postSet.forEach(function(post) {
     if (post.reactions && post.reactions.length < avg - stdDev*num) {
       if (!max || (max && post.reactions.length > avg - stdDev*max)){
         results.push(keys[i]);        
       }
-    }    
-  }
+    }       
+  })
   return results;
 }
 
@@ -260,7 +254,7 @@ function lowestPercentOfPosts(percent) {
   var total = keys.length;
   var results = [];
   var index = total * percent / 100;
-  postList = postList.sort(function(a, b) {
+  var postList = Array.from(postSet).sort(function(a, b) {
     return parseFloat(a.reactions.length) - parseFloat(b.reactions.length);
   });
 
