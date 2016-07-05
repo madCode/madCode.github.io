@@ -229,7 +229,7 @@ function standardDeviationAbovePosts(avg, stdDev, num, max) {
   postSet.forEach(function(post) {
     if (post.reactions && post.reactions.length > avg + stdDev*num) {
       if (!max || (max && post.reactions.length < avg + stdDev*max)){
-        results.push(keys[i]);        
+        results.push(post.id);        
       }
     }    
   })
@@ -242,7 +242,7 @@ function standardDeviationBelowPosts(avg, stdDev, num, min) {
   postSet.forEach(function(post) {
     if (post.reactions && post.reactions.length < avg - stdDev*num) {
       if (!max || (max && post.reactions.length > avg - stdDev*max)){
-        results.push(keys[i]);        
+        results.push(post.id);        
       }
     }       
   })
