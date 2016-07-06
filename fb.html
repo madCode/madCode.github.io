@@ -37,7 +37,7 @@
 
 <script>
 var posts = {};
-var postSet = new Set();
+var postList = [];
 
 var getJSON = function(url, callback) {
     var xhr = new XMLHttpRequest();
@@ -71,7 +71,7 @@ FB.api(
     "/me/feed?since=" + timestampStart + "&until=" + timestampEnd,
     function (response) {
       posts = {};
-      postSet = new Set();
+      postList = [];
       recordResponse(response, 1);
     }
 );}
@@ -84,7 +84,7 @@ function getPost(postId) {
     "/"+ postId,
     function (response) {
       //posts = {};
-      //postSet = [];
+      //postList = [];
       recordSinglePost(response);
     }
   );
@@ -106,8 +106,10 @@ function recordSinglePost(response) {
     posts[objectId].created_time = response.created_time;
     hasPicture(objectId);
     getLikes(objectId, "");
-    postSet.add(posts[objectId]);
   }
+  postList = Object.keys(posts).map(function(key){
+      return posts[key];
+    });
 }
 
 function recordResponse(response, pageNum) {
@@ -128,7 +130,6 @@ function recordResponse(response, pageNum) {
       posts[objectId].created_time = response.data[i].created_time;
       hasPicture(objectId);
       getLikes(objectId, "");
-      postSet.add(posts[objectId]);
     }
     if (response.paging && response.paging.next) {
       if (pageNum % 20 == 0) {
@@ -147,12 +148,15 @@ function recordResponse(response, pageNum) {
         " posts!");
       //analyzePosts();
     }
+    postList = Object.keys(posts).map(function(key){
+        return posts[key];
+      });
   }
 
 }
 
 function checkPosts() {
-  postSet.forEach(function(post) {
+  postList.forEach(function(post) {
     if (!post.message) {
       getPost(post.id);
     }
@@ -197,9 +201,9 @@ function getLikes(objectId, after) {
 }
 
 function averageReactions() {
-  var total = postSet.size;
+  var total = postList.size;
   var sum = 0;
-  postSet.forEach(function(post) {
+  postList.forEach(function(post) {
     try {
       sum += post.reactions.length;
     } catch (err) {
@@ -212,9 +216,9 @@ function averageReactions() {
 }
 
 function standardDeviation(average) {
-  var total = postSet.size;
+  var total = postList.size;
   var sum = 0;
-  postSet.forEach(function(post) {
+  postList.forEach(function(post) {
     if (post.reactions) {
       sum += Math.pow(post.reactions.length - average, 2);
     }
@@ -225,7 +229,7 @@ function standardDeviation(average) {
 function standardDeviationAbovePosts(avg, stdDev, num, max) {
   //for post, if it has more than num*stdDev likes, add it
   var results = [];
-  postSet.forEach(function(post) {
+  postList.forEach(function(post) {
     if (post.reactions && post.reactions.length > avg + stdDev*num) {
       if (!max || (max && post.reactions.length < avg + stdDev*max)){
         results.push(post.id);        
@@ -238,7 +242,7 @@ function standardDeviationAbovePosts(avg, stdDev, num, max) {
 function standardDeviationBelowPosts(avg, stdDev, num, min) {
   //for post, if it has more than num*stdDev likes, add it
   var results = [];
-  postSet.forEach(function(post) {
+  postList.forEach(function(post) {
     if (post.reactions && post.reactions.length < avg - stdDev*num) {
       if (!max || (max && post.reactions.length > avg - stdDev*max)){
         results.push(post.id);        
@@ -253,14 +257,6 @@ function lowestPercentOfPosts(percent) {
   var total = keys.length;
   var results = [];
   var index = total * percent / 100;
-  try {
-    var postList = Array.from(postSet);
-  } catch (err) {
-    var postList = [];
-    postSet.forEach(function(post) {
-      postList.push(post);
-    });
-  }
   postList = postList.sort(function(a, b) {
     return parseFloat(a.reactions.length) - parseFloat(b.reactions.length);
     });
