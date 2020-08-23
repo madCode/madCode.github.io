@@ -1,35 +1,43 @@
 var xhttp;
+var stepCount = 3;
+
+function previousHtml(start) {
+	if (start > 0) {
+		return "<button onclick=\"renderXml("+(Math.min(start-stepCount, start))+","+(start)+")\">< Prev</button>";
+	}
+	return "";
+
+}
+
+function nextHtml(max, length) {
+	if (max < length) {
+		return "<button onclick=\"renderXml("+max+","+(max+stepCount)+")\">Next ></button>";
+	}
+	return "";
+}
 
 function renderXml(start, max) {
 	xmlDoc=xhttp.responseXML;
 
 	var strBuffer= "";
-	strBuffer = strBuffer +"<table border='1'>";
+	strBuffer = strBuffer +"<div class=\"col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1\">";
 	var x=xmlDoc.getElementsByTagName("entry");
-	if (start > 0) {
-		strBuffer = strBuffer + "<button onclick=\"renderXml("+(Math.min(start-10, start))+","+(start)+")\">Previous Articles</button>"
-	}
 	for (i=start;i<x.length;i++)
 	  {
 	  	link = x[i].getElementsByTagName("link")[0].getAttribute("href");
 	  	title = x[i].getElementsByTagName("title")[0].innerHTML;
 	  	summary = x[i].getElementsByTagName("summary")[0].innerHTML;
 	  	summary = summary.replace("<![CDATA[", "").replace("]]>", "");
-	  	titleElement = "<a href=" + link + ">" + title + "</a>"
-	  	readMoreElement = "<a href=" + link + "> read more...</a>"
-	    strBuffer = strBuffer +"<tr><td>";
+	  	titleElement = "<div class=\"portfolio-caption\"><h4>" + title + "</h4></div>";
+	    strBuffer = strBuffer +"<a href=\""+link + "\" class=\"col-sm-6\">";
 	    strBuffer = strBuffer + titleElement;
-	    strBuffer = strBuffer + "<span>"+summary;
-	    strBuffer = strBuffer + readMoreElement+"</span>";
-	    strBuffer = strBuffer +"</td></tr>";
+	    strBuffer = strBuffer + "<div class=\"text-muted\">"+summary+"</div><br></a>";
 	    if(i==max){
-	    	if (max < x.length) {
-	    		strBuffer = strBuffer + "<button onclick=\"renderXml("+max+","+(max+10)+")\">More Articles</button>"
-	    	}
 	      break;
 	    }
 	  }
-	strBuffer = strBuffer +"</table>";
+	strBuffer = strBuffer +"</div>";
+	strBuffer = strBuffer + previousHtml(start) + " " + nextHtml(max, x.length);
 	document.getElementById("feeddisplay").innerHTML =strBuffer;
 }
 
@@ -44,7 +52,7 @@ else
   }
 xhttp.onreadystatechange = function () {
 	if (this.readyState ==4 && this.status == 200) {
-		renderXml(0, 10);
+		renderXml(0, stepCount);
 	}
 };
 xhttp.open("GET","http://iuqiddis.com/tt-rss/public.php?op=rss&id=-2&view-mode=all_articles&key=pl9w9u5f0e29a6e9b1b",true);

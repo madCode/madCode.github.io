@@ -1,4 +1,4 @@
-/*to change accent color back to default, 
+/*to change accent color back to default,
 replace all #88a1c2 with #0085a1*/
 
 h1{
@@ -30,6 +30,12 @@ h1{
   /*-webkit-filter: invert(25%) sepia() saturate(1000000%) brightness(200%);*/
   /*hue-rotate(180deg) brightness(0.3) saturate(10000%); */
   /* hue-rotate(152deg) saturate(24.5%) brightness(71.6%);*/
+}
+
+.filter-dark {
+  filter: invert(25%) sepia() saturate(100000%) hue-rotate(174deg);
+   max-height: 4.5rem;
+   -webkit-filter: invert(80%);
 }
 
 body {
@@ -175,7 +181,7 @@ hr.small {
 .intro-header .page-heading {
   padding: 100px 0 50px;
   color: white;
-  
+
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
