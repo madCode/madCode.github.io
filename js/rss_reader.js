@@ -55,6 +55,6 @@ xhttp.onreadystatechange = function () {
 		renderXml(0, stepCount);
 	}
 };
-xhttp.open("GET","http://iuqiddis.com/tt-rss/public.php?op=rss&id=-2&view-mode=all_articles&key=pl9w9u5f0e29a6e9b1b",true);
+xhttp.open("GET","://iuqiddis.com/tt-rss/public.php?op=rss&id=-2&view-mode=all_articles&key=pl9w9u5f0e29a6e9b1b",true);
 xhttp.send();
 
