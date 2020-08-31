@@ -1,11 +1,11 @@
 ---
 layout: page
-description: This is who I am.<div class="row-fluid" style="padding-top:1rem;"><ul class="list-inline text-center"><li><a href="http://github.com/madCode/"><img id="social-button" class="img-responsive social-button" src="/images/icons/github.png" alt="github profile"></a></li><li><a href="https://www.linkedin.com/pub/madeeha-ghori/40/6b8/65b"><img id="social-button" class="img-responsive social-button" src="/images/icons/linkedin.png" alt="linkedin profile"></a></li><li><a href="https://www.hackster.io/madcode"><img id="social-button" class="img-responsive social-button" src="/images/icons/hackster.png" alt="hackster profile"></a></li></ul></div>
+description: This is who I am.<div class="row-fluid" style="padding-top:1rem;"><ul class="list-inline text-center"><li><a href="http://github.com/madCode/"><img id="social-button" class="img-responsive social-button" src="/images/icons/github.png" alt="github profile"></a></li><li><a href="https://www.linkedin.com/in/madeehaghori/"><img id="social-button" class="img-responsive social-button" src="/images/icons/linkedin.png" alt="linkedin profile"></a></li><li><a href="https://www.hackster.io/madcode"><img id="social-button" class="img-responsive social-button" src="/images/icons/hackster.png" alt="hackster profile"></a></li></ul></div>
 displaycategory: portfolio
 ---
 <h1>This is what I do.</h1>
 <hr/>
-<div id="portfolio">
+<div id="portfolio" class="row">
 {% for post in site.posts %}
 {% if post.categories contains page.displaycategory %}
 <a href="{{ BASE_PATH }}{{ post.url }}" class="col-sm-6">
@@ -19,27 +19,29 @@ displaycategory: portfolio
 {% endif %}
 {% endfor %}
 </div>
-<h1>Blog Posts</h1>
-<hr/>
-{% for post in paginator.posts %}
-{% if post.categories contains page.displaycategory %}
-{% else %}
-<div class="post-preview">
-    <a href="{{BASE_PATH}}{{ post.url }}">
-        <h2>
-            {{ post.title }}
-        </h2>
-        {% if post.tagline %}
-        <h3 class="post-subtitle">
-            {{ post.tagline }}
-        </h3>
-        {% endif %}
-    </a>
-    <p class="post-meta">Posted {% if post.author != "by Madeeha Ghori"%}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+<div class="row">
+<h1><a href="/feed.xml">Blog Posts <img class="img-responsive filter-dark link-button" src="/images/icons/rss.png" alt="rss feed for my posts" style="display: inline;"></a></h1>
+    <hr/>
+    {% for post in paginator.posts %}
+    {% if post.categories contains page.displaycategory %}
+    {% else %}
+    <div class="post-preview">
+        <a href="{{BASE_PATH}}{{ post.url }}">
+            <h2>
+                {{ post.title }}
+            </h2>
+            {% if post.tagline %}
+            <h3 class="post-subtitle">
+                {{ post.tagline }}
+            </h3>
+            {% endif %}
+        </a>
+        <p class="post-meta">Posted {% if post.author != "by Madeeha Ghori"%}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+    </div>
+    <hr>
+    {% endif %}
+    {% endfor %}
 </div>
-<hr>
-{% endif %}
-{% endfor %}
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}

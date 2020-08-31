@@ -6,7 +6,6 @@ h1{
 }
 
 .social-button {
-  /*filter: invert(25%) sepia() saturate(100000%) hue-rotate(174deg);*/
    max-height: 7rem;
 }
 
@@ -20,16 +19,18 @@ h1{
   -webkit-filter: brightness(0.5) sepia(1) hue-rotate(174deg) saturate(103.2%) brightness(103%%);
 }
 
-/*#social-button:active {
-  -webkit-filter: brightness(0.5) sepia(1) hue-rotate(174deg) saturate(103.2%) brightness(103%%);
-}*/
+.link-button{
+  max-height: 7rem;
+}
 
-#social-button:hover {
-  -webkit-filter: brightness(0.5) sepia(1) hue-rotate(174deg) saturate(103.2%) brightness(103%%);
+.link-button:hover {
+  -webkit-filter: brightness(0.5) sepia(1) hue-rotate(176deg) saturate(92.5%) brightness(105%);
+  filter: brightness(0.5) sepia(1) hue-rotate(176deg) saturate(92.5%) brightness(105%);
+}
 
-  /*-webkit-filter: invert(25%) sepia() saturate(1000000%) brightness(200%);*/
-  /*hue-rotate(180deg) brightness(0.3) saturate(10000%); */
-  /* hue-rotate(152deg) saturate(24.5%) brightness(71.6%);*/
+.social-button:hover {
+  /*-webkit-filter: brightness(0.5) sepia(1) hue-rotate(-32deg) saturate(75.5%) brightness(86%);*/
+  filter: brightness(0) saturate(100%) invert(53%) sepia(10%) saturate(2760%) hue-rotate(317deg) brightness(79%) contrast(98%);
 }
 
 .filter-dark {

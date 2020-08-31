@@ -17,13 +17,12 @@ There are a few options when revitalizing an old android tablet:
 * [replace your android os with cyanogenmod](http://www.cyanogenmod.org/)
 * [use the tablet](http://www.pcworld.com/article/2109121/how-to-turn-an-old-phone-or-tablet-into-a-pc-productivity-tool.html) [for something entirely different](http://lifehacker.com/5925049/new-uses-for-your-old-tablet)
 
-##What is Cyanogenmod?
+## What is Cyanogenmod?
 As the website says,
-
 >Cyanogenmod is an alternative operating system intended to replace the one pre-installed on your smart phones and tablets. If you've got an older device that isn't getting updates anymore, or if your device seems unusually slow, or maybe you're sick of spyware, adware, and other unwanted garbage on your phone that you can't remove... Maybe your device is missing features or has been otherwise artificially limited in functionality. Perhaps you just could use a boost in performance... Or maybe you'd like to be more confident that your operating system has included some of the latest bug fixes...
 >If so, CM might be for you.
 
-##What am I going to do?
+## What am I going to do?
 Cyanogenmod ports the latest android code to older devices. The nexus 7 tablet isn't old enough that I need Cyanogenmod in order to use most apps. So instead I will just port back to the original version of the operating system. Note that I'm using linux for this endeavor.
 
 First step, I [downloaded the desired Android archive for my Nexus 7 model here](https://developers.google.com/android/nexus/images#nakasi)
