@@ -17,12 +17,12 @@ github: https://github.com/madCode/chattyCoaster
 ---
 {% include portfolioheader.html %}
 
-#The Problem
+# The Problem
 The challenge was to design a novel interactive kitchen object. As the assignment noted: "Your new object should be motivated by the cultural activities of the kitchen and provide a new narrative there."
 
 Cohabitation is a cornerstone of college life, specifically living with almost-strangers. As such, we found that while many considered the kitchen to be a place to converse and catch up, many were only having superficial conversations with their housemates.
 
-#The Solution
+# The Solution
 Our goal with Chatty Coaster was to design something that prompted more interesting conversations in the kitchen.
 
 <div id="finalProductCarousel" class="carousel slide">
@@ -40,7 +40,7 @@ Our goal with Chatty Coaster was to design something that prompted more interest
 
 Placing a mug on the coaster activates it. Chatty Coaster lights up, then pays attention to the noise level in the room. When the conversation pauses for more than 3 seconds (a true awkward silence), the coaster interjects with a question of its own, prompting the conversation to the continue. Or at least breaking the ice with some laughter.
 
-#Brainstorm and Ideation
+# Brainstorm and Ideation
 
 The idea began as two separate ideas: a table that helped with awkward silences and a coaster that changed color to help keep track of how long items had been kept on it.
 
@@ -52,7 +52,7 @@ We considered coasters that fit together in various ways. One option were two co
 
 Another idea was coasters with letters of the alphabet on the side. The letters would allow individuals to keep track of their coaster. The coasters would then fit together to create an alphabet stack. A coaster that asked questions <i>and</i> allowed people to keep track of their coasters seemed like too complex a narrative, so the idea was dropped.
 
-#Design Process
+# Design Process
 
 The casing went through several iterations. We were very keen on a circular coaster, but creating a cylindrical shape is very difficult.
 
@@ -76,7 +76,7 @@ But we determined that the soft wood with the acrylic accents would clash with t
 
 ![image of coaster with final lids](/images/coaster/header1.jpg){: .img-responsive}
 
-#Final Design
+# Final Design
 
 The final design, as previously discussed, involves a aluminum pipe casing. The lid is clear acrylic slightly sanded to diffuse the light of the LEDs inside. These LEDs light up when the coaster is active and listening.
 
@@ -88,7 +88,7 @@ The greatest design challenge for Chatty Coaster was to keep it small while yet 
 
 After we had a device that was suitably small we cut a hole in its base so that the sound from the speaker could be heard more clearly, and added feet to the bottom to lift the whole device off the table such that the table's natural sound-reflecting properties would aid in the device's volume.
 
-#Lessons Learned
+# Lessons Learned
 
 If we were to iterate on Chatty Coaster further, there are a few changes I would suggest. First of all, a photosensor is not an accurate way to detect a glass or mug, particularly in low light settings. Switching it out for a pressure sensor would be a better bet.
 

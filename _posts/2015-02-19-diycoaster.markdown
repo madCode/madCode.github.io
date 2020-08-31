@@ -12,7 +12,7 @@ The following instructions detail how Team Avacado made Chatty Coaster. As UC Be
 
 [The illustrator file used to cut the base, lid, and vinyl stickers.](/assets/coaster/coasterALL.ai)
 
-##Materials Used for Casing
+## Materials Used for Casing
 - 1 sheet general soft wood board
 - 1 sheet clear acrylic
 - 1 sheet copier paper
@@ -21,7 +21,7 @@ The following instructions detail how Team Avacado made Chatty Coaster. As UC Be
 - 1 proto board
 - 2 large plastic beads
 
-##Materials Used for Electronics
+## Materials Used for Electronics
 - 4 color-changing LEDs
 - BM-700 Microphone
 - KENYX 302 USB Recording Equipment
@@ -34,17 +34,17 @@ The following instructions detail how Team Avacado made Chatty Coaster. As UC Be
 - LM7805 Series Transistor
 - Audio-sound breakout-WTV020SD
 
-##Machinery Used
+## Machinery Used
 - vinyl cutter
 - laser cutter
 - lathe
 
-##Code For Arduino
+## Code For Arduino
 The combinedCode folder contains the library for the WTV020SD sound breakout board as well as the code for the coaster itself.
  
 [download code from here](https://github.com/madCode/chattyCoaster/tree/master/combinedCode)
 
-##Creating the Electronics
+## Creating the Electronics
 These are the guts of the Chatty Coaster. No matter what the outside looks like, if you've got this, you're good to go.
 
 I recommend making this part first. Then you can create a casing to fit. As coasters are generally rather thin, try to minimize the height for a more professional final look.
@@ -53,7 +53,7 @@ Use the following diagram to wire all the electronics together.
 
 ![Diagram of electronics](/images/coaster/electronics3.jpg){: .img-responsive}
 
-##Create the Casing
+## Create the Casing
 
 ### 1. Create the cylindrical body.
 <table class="table-responsive">
@@ -73,7 +73,7 @@ Use the following diagram to wire all the electronics together.
 </table>
 
 
-###2. Cut the bottom. Cut the two beads in half each.
+### 2. Cut the bottom. Cut the two beads in half each.
 Use a laser cutter to cut a circle out of general soft wood board. This circle should have the same diameter as the cylindrical part of your casing.
 
 Make sure to cut a hole in the bottom in the location of the speaker. This will allow the sound to carry better.
@@ -82,18 +82,18 @@ Glue three of the halves of the beads to the bottom of the coaster. This will ho
 
 ![Image of bottom of coaster with hole cut for speaker and beads attached to the bottom](/images/coaster/finalcasing2.jpg){: .img-responsive}
 
-###3. Cut the lid
+### 3. Cut the lid
 Cut a circle for the lid in the clear acrylic, using the diameter of the pipe from within the lip.
 
 Sand the lid slightly to allow for diffusion of the light.
 
-###4. Cut the sticker for the lid.
+### 4. Cut the sticker for the lid.
 
 Use the vinyl cutter to create a punctuation sticker. Place on the back of the lid.
 
 You can use the illustrator file to cut that.
 
-##Possible Substitutions
+## Possible Substitutions
 - Make the coaster rectangular. A box-like shape is easier to create than a cylinder.
 - Consider using cardboard instead of wood, acrylic, or metal. It will be easier to cut with scissors.
 - Consider 3D printing the cylindrical casing

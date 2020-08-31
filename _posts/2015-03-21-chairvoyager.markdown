@@ -18,7 +18,7 @@ header-img: /images/chair/header2.jpg
 ---
 {% include portfolioheader.html %}
 
-#The Problem
+# The Problem
 "In this [assigment] you are challenged to
 collage a simple human power transportation technology with a novel interactive experience.
 What designs result when skateboards are equipped with accelerometers, a scooter knows it’s
@@ -26,7 +26,7 @@ mileage, a stroller can talk, a wheelchair has superpowers?"
 
 We wanted to push the boundaries of what transportation meant. What if we played with the movement of the mind instead of just the body? With this in mind, we developed the ChairVoyager.
 
-#The Solution
+# The Solution
 <div id="finalProductCarousel" class="carousel slide">
   <!-- Carousel items -->
   <div class="carousel-inner">
@@ -45,7 +45,7 @@ Our group wanted to examine the idea of feeling transported to far away places w
 
 It begins as a simple office chair with an accompanying map rug. When you need a break, lean back. Push the chair over the rug. As you travel over various countries, close your eyes and listen to news stories from around the world. The chair has a color sensor on the bottom that detects which continent you are over and reads you news from that specific continent.
 
-#Brainstorm and Ideation
+# Brainstorm and Ideation
 
 Our initial design choice for our transportation was a one called "no place like home" shoes. It was intended to empower kids to be able to contact parents without the need to yell moms' names or use a cellphone. The idea was that a child would wear specially designed shoes with BLE capability. These shoes, once tapped against each other a certain number of times, would send a message to a parent's cell phone to come and get the kid. We thought it would be a great way to provide safety and an element of playful enchantment as the show would respond by saying "There is no place like home" to the child - as Dorothy would say in the movie The Wizard of Oz. 
 
@@ -53,7 +53,7 @@ Our initial design choice for our transportation was a one called "no place like
 
 However, initial user interviews revealed parents' fears of safety and issues with giving kids the autonomy to decide when to reveal their location. The majority of parents were against a design as the one envisions and said they would not allow their children to wear  such shoes. Even though we rejected the shoes idea due to various safety concerns, we started to think about transportation as more than just physical, embodying aspects such as auditory or sensual signals that are tied with transportation.
 
-#Design Process
+# Design Process
 
 We thought of transportation beyond the physical. We considered mental transportation and transportation through time.
 
@@ -61,7 +61,7 @@ The concept of a traveling chair fit in with what we wanted to accomplish and we
 
 Hence we created ChairVoyager. As the user kicks back for a break, the smart light color sensor detects what country on the World Mat and plays back curated news headlines from that country.
 
-###Creating a Natural Interface
+### Creating a Natural Interface
 
 A key design choice our group made was deciding how much interaction to require of the user. Smart phones require a lot of "unnatural" interaction: typing, selecting pages, etc. We aimed for something more natural, more intuitive. Rolling the chair over different parts of a rug seemed like a natural control system.
 
@@ -69,13 +69,13 @@ A key design choice our group made was deciding how much interaction to require 
 
 We considered hiding exactly what different parts of the rug meant, so that the user could suddenly find themselves in the Congo with no visual cue. However, we decided that users would get frustrated without an understandable control system. A color-coded map outlining the continents gives users a visual cue about their location, but leaves an opportunity for the users to be greeted with unexpected and diverse news stories from a variety of countries in that continent. The bold colors make it clear where one area ends and another begins; the white background could also be programmed to play naval-related news or whale songs. Also the low resolution (big contents) made it easy for the user to land on their desired continent.
 
-###Speaking to the User
+### Speaking to the User
 
 ![image of speakers](/images/chair/speakers1.jpg)
 
 Another important design choice was the use of audio. Originally we thought of having a loudspeaker attached to the backrest of the chair and it would play the tracks in a high volume, enough for everyone in a room to hear it. After user research, we realized that noise is not a welcome solution in an office setting. We began thinking about different solutions and honed in on a surround sound quiet headrest with very localized sound where only the user sitting in the chair would hear the audio piece. The sound is not only localized, but also focused and amplified leading to a clean listening experience. Also,  office neighbors can work uninterrupted, barely making out a muffled sound, not knowing that the their friend is actually traveling in the Middle East at that moment.
 
-#Lessons Learned
+# Lessons Learned
 
 ChairVoyager is a very complete prototype. There are no changes I would make in this iteration of the product. However, what we built opens the doors to a variety of iteractions.
 
