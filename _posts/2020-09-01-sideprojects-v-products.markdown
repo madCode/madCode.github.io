@@ -1,7 +1,7 @@
 ---
 layout: post
 title: sideprojects v products
-tagline: The best way to build your side project is the sam
+tagline: The best way to build your side project is the same...
 tags: microblog
 category: microblog
 maintag: microblog
