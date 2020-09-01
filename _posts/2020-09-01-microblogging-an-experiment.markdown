@@ -1,6 +1,6 @@
 ---
 layout: post
-title: microblogging an experiment
+title: microblogging: an experiment
 tagline: I've recently started following Dave Winer's blog, which I find fascinating predominantly in format...
 tags: microblog
 category: microblog
