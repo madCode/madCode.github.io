@@ -1,6 +1,6 @@
 ---
 layout: post
-title: microblogging: an experiment
+title: "microblogging: an experiment"
 tagline: I've recently started following Dave Winer's blog, which I find fascinating predominantly in format...
 tags: microblog
 category: microblog
@@ -23,4 +23,4 @@ Then I used [Syncthing](https://syncthing.net/) to share the blogPosts folder be
 
 Obviously, there's more that can be automated here. Next steps:
 1. A cron job that will automatically run the script _and_ commit the new blog posts to master
-2. Think harder about drafts. Right now, there's no way to denote a file as being a draft. Maybe I gotta make a way...
+2. Think harder about drafts. Right now, there's no way to denote a file as being a draft.
