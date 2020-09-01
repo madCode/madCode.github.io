@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
             </button>
             {% if page.url != site.baseurl %}
-            <a class="navbar-brand" href="{{ site.baseurl }}">{{site.title}}</a>
+            <a class="navbar-brand" href="/">{{site.title}}</a>
             {% endif %}
         </div>
 
@@ -19,7 +19,7 @@
             <ul class="nav navbar-nav navbar-right">
                 {% if page.url != site.baseurl %}
                 <li>
-                    <a href="{{ site.baseurl }}">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 {%endif%}
                 {% for page in site.pages %}{% if page.title %}
