@@ -1,0 +1,24 @@
+I"�<p>I have a Nexus 7 tablet that was gifted to me back when it came out. It’s only 3 years old, but the latest google update absolutely killed it. Opening an app of any kind would very quickly lead to crashing, and multitasking of any kind was out. The goal was to make the tablet usable again.</p>
+
+<p>There are a few options when revitalizing an old android tablet:</p>
+
+<ul>
+  <li>revert back to an old version of android</li>
+  <li><a href="http://www.cyanogenmod.org/">replace your android os with cyanogenmod</a></li>
+  <li><a href="http://www.pcworld.com/article/2109121/how-to-turn-an-old-phone-or-tablet-into-a-pc-productivity-tool.html">use the tablet</a> <a href="http://lifehacker.com/5925049/new-uses-for-your-old-tablet">for something entirely different</a></li>
+</ul>
+
+<h2 id="what-is-cyanogenmod">What is Cyanogenmod?</h2>
+<p>As the website says,</p>
+<blockquote>
+  <p>Cyanogenmod is an alternative operating system intended to replace the one pre-installed on your smart phones and tablets. If you’ve got an older device that isn’t getting updates anymore, or if your device seems unusually slow, or maybe you’re sick of spyware, adware, and other unwanted garbage on your phone that you can’t remove… Maybe your device is missing features or has been otherwise artificially limited in functionality. Perhaps you just could use a boost in performance… Or maybe you’d like to be more confident that your operating system has included some of the latest bug fixes…
+If so, CM might be for you.</p>
+</blockquote>
+
+<h2 id="what-am-i-going-to-do">What am I going to do?</h2>
+<p>Cyanogenmod ports the latest android code to older devices. The nexus 7 tablet isn’t old enough that I need Cyanogenmod in order to use most apps. So instead I will just port back to the original version of the operating system. Note that I’m using linux for this endeavor.</p>
+
+<p>First step, I <a href="https://developers.google.com/android/nexus/images#nakasi">downloaded the desired Android archive for my Nexus 7 model here</a></p>
+
+<p>Then, I followed <a href="http://druss.co/2014/12/how-to-downgrade-nexus-from-5-0-to-4-4/">the rest of the instructions here.</a></p>
+:ET

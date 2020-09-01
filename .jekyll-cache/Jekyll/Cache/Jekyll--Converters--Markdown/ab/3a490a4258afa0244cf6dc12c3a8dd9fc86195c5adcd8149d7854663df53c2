@@ -1,0 +1,97 @@
+I"}<iframe class="flex-video-widescreen" src="https://www.youtube.com/embed/TRWMHCnoQ3U" frameborder="0"></iframe>
+<p>
+<h4>
+<div class="row portfolio-info">
+	<div class="col-sm-4">
+		<a href="/instructions/2015/02/19/diycoaster/">make your own</a>
+	</div>
+	<div class="col-sm-4">
+		<a href="https://www.hackster.io/team-avocado/chatty-coasters">view the project on hackster</a>
+	</div>
+	<div class="col-sm-4">
+		<a href="https://github.com/madCode/chattyCoaster">view project code on github</a>
+	</div>
+</div>
+</h4>
+</p>
+
+<h1 id="the-problem">The Problem</h1>
+<p>The challenge was to design a novel interactive kitchen object. As the assignment noted: “Your new object should be motivated by the cultural activities of the kitchen and provide a new narrative there.”</p>
+
+<p>Cohabitation is a cornerstone of college life, specifically living with almost-strangers. As such, we found that while many considered the kitchen to be a place to converse and catch up, many were only having superficial conversations with their housemates.</p>
+
+<h1 id="the-solution">The Solution</h1>
+<p>Our goal with Chatty Coaster was to design something that prompted more interesting conversations in the kitchen.</p>
+
+<div id="finalProductCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item"><img src="/images/coaster/header1.jpg" class=".img-responsive" alt="image of chatty coaster: a tall coaster with aluminum sides and a top with a punctuation mark design on it." /></div>
+    <div class="item"><img src="/images/coaster/header2.jpg" class=".img-responsive" alt="image of chatty coaster with mug on it." /></div>
+    <div class="item"><img src="/images/coaster/team.jpg" class=".img-responsive" alt="a picture of the team" /></div>
+  </div>
+  <!-- Carousel nav -->  
+  <a class="carousel-control left" href="#finalProductCarousel" data-slide="prev">‹</a>
+  <a class="carousel-control right" href="#finalProductCarousel" data-slide="next">›</a>
+</div>
+<p><br /></p>
+
+<p>Placing a mug on the coaster activates it. Chatty Coaster lights up, then pays attention to the noise level in the room. When the conversation pauses for more than 3 seconds (a true awkward silence), the coaster interjects with a question of its own, prompting the conversation to the continue. Or at least breaking the ice with some laughter.</p>
+
+<h1 id="brainstorm-and-ideation">Brainstorm and Ideation</h1>
+
+<p>The idea began as two separate ideas: a table that helped with awkward silences and a coaster that changed color to help keep track of how long items had been kept on it.</p>
+
+<p><img src="/images/coaster/ideation1.jpg" alt="sketch of first ideation" class="img-responsive" /></p>
+
+<p>We considered coasters that fit together in various ways. One option were two coasters: one used by each person in the conversation. Placing the coasters in proximity to one another or connecting them in some way would activate them. This, however, involved creating two functioning coasters, which would not work with our timeline.</p>
+
+<p><img src="/images/coaster/ideation2.jpg" alt="sketch of second ideation" class="img-responsive" /></p>
+
+<p>Another idea was coasters with letters of the alphabet on the side. The letters would allow individuals to keep track of their coaster. The coasters would then fit together to create an alphabet stack. A coaster that asked questions <i>and</i> allowed people to keep track of their coasters seemed like too complex a narrative, so the idea was dropped.</p>
+
+<h1 id="design-process">Design Process</h1>
+
+<p>The casing went through several iterations. We were very keen on a circular coaster, but creating a cylindrical shape is very difficult.</p>
+
+<p>We started by constructing the case using acryclic crescent moons glued together:</p>
+
+<p><img src="/images/coaster/process1.jpg" alt="image of acrylic crescent version" class="img-responsive" /></p>
+
+<p>Dissatisfied with the way it looked, we moved to a 3D printed version:</p>
+
+<p><img src="/images/coaster/process3.jpg" alt="image of 3D printed version" class="img-responsive" /></p>
+
+<p>Our final casing is a lathed aluminum pipe:</p>
+
+<p><img src="/images/coaster/process5.jpg" alt="image of final version" class="img-responsive" /></p>
+
+<p>The lids also went through a couple iterations. It began like this:</p>
+
+<p><img src="/images/coaster/coastertest2.jpg" alt="image of initial lids" class="img-responsive" /></p>
+
+<p>But we determined that the soft wood with the acrylic accents would clash with the alumnimum pipe. The final product looked like this:</p>
+
+<p><img src="/images/coaster/header1.jpg" alt="image of coaster with final lids" class="img-responsive" /></p>
+
+<h1 id="final-design">Final Design</h1>
+
+<p>The final design, as previously discussed, involves a aluminum pipe casing. The lid is clear acrylic slightly sanded to diffuse the light of the LEDs inside. These LEDs light up when the coaster is active and listening.</p>
+
+<p>The inside is a tightly packed collection of electronics. We used a photosensor to detect mugs, a mic to detect sound, a few LEDs and a speaker. The LEDs were very harsh, so we used a cut sheet of paper under the lid to try and diffuse the light further.</p>
+
+<p>The greatest design challenge for Chatty Coaster was to keep it small while yet allowing it enough room inside to house all of the components it needed to both listen for and produce sound. These components included a speaker, a microphone, an amplifier, three LEDs, and an arduino with power source that would run all of these components. In order to arrive at our smallest model we slowly scaled down our casing, from a 6” diameter device made out of acrylic disks, to a 5” 3D-printed shell, to our final 4” device made out of milled aluminum, before scaling down the inside components to meet our new space requirements. We switched out our standard-sized arduino for an arduino mini, chose a thin speaker over a bulkier model, and soldered all of our components together on a stripboard, thinner than the breadboard we had originally planned on using.</p>
+
+<p><img src="/images/coaster/finalcasing2.jpg" alt="Image of the bottom of Chatty Coaster" class="img-responsive" /></p>
+
+<p>After we had a device that was suitably small we cut a hole in its base so that the sound from the speaker could be heard more clearly, and added feet to the bottom to lift the whole device off the table such that the table’s natural sound-reflecting properties would aid in the device’s volume.</p>
+
+<h1 id="lessons-learned">Lessons Learned</h1>
+
+<p>If we were to iterate on Chatty Coaster further, there are a few changes I would suggest. First of all, a photosensor is not an accurate way to detect a glass or mug, particularly in low light settings. Switching it out for a pressure sensor would be a better bet.</p>
+
+<p>We also did not have an off switch, given that we expected the photosensor to operate as an on and off switch. While this works in theory, having an on-off switch is preferrable if the coaster will not be used for long stretches of time.</p>
+
+<p>The final change I would suggest would be to upgrade the speaker. The sound quality is not too fantastic and being able to hear the questions clearly is central to the experience.</p>
+
+:ET
