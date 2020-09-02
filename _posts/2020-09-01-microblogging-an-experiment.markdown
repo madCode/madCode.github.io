@@ -7,9 +7,9 @@ category: microblog
 maintag: microblog
 ---
 # Microblogging: An Experiment
-I've recently started following [Dave Winer's blog](http://scripting.com/), which I find fascinating predominantly in format. Much like Tumblr or Twitter, Dave microblogs. Each entry in his blog is a tiny thought or idea with its own anchor tag (and published as an individual item in his rss feed).
+I've recently started following [Dave Winer's blog](http://scripting.com/), which I find fascinating (in part) in format. Much like Tumblr or Twitter, Dave microblogs. Each entry in his blog is a tiny thought or idea with its own anchor tag (and each is published as an individual item in his rss feed).
 
-I've been thinking a lot lately about ideas and how people share and discuss ideas. I enjoy discussing ideas with friends, but I have a harder time sharing ideas on the internet. The idea of attempting microblogging just as a way to practice sharing ideas and take the pressure out of "blogging" is intriguing to me. So I decided to give it a go. My goal is to share one new thing I learned each week.
+I've been thinking a lot lately about ideas and how people share them. I enjoy discussing ideas with friends, but I have a harder time sharing them on the internet. Especially on the public internet in proximity to my real name. Microblogging as a way to practice sharing ideas and take the pressure out of "blogging" is intriguing to me. So I decided to give it a go. My goal is to share one new thing I learn each week.
 
 The hard part? This website is clearly not built for easy blogging.
 
