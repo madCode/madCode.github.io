@@ -2,7 +2,7 @@
 layout: post
 title: IPOs vs SPACs
 tagline: Came across two competing ideas this week. First, ...
-tags: microblog
+tags: microblog finance startups
 category: microblog
 maintag: microblog
 ---

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: how to incentivize virality
-tagline: Dave Winer [posted today](http://scripting.com/202...
-tags: microblog
+tagline: Dave Winer posted today...
+tags: microblog tech-musings startups
 category: microblog
 maintag: microblog
 date: 2020-09-02 23:27:03
