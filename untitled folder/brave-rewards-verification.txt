@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: madcode.github.io
+Token: f0281e3ea1ac5f4de2f5a905642155bb7f6d34b0d388f69a523cf5cc960bc415
