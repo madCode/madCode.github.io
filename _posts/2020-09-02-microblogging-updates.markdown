@@ -1,7 +1,7 @@
 ---
 layout: post
 title: microblogging updates
-tagline: The latest additions to my experiment: * A cron jo...
+tagline: The latest additions to my experiment...
 tags: microblog
 category: microblog
 maintag: microblog

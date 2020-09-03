@@ -1,8 +1,8 @@
 ---
 layout: post
-title: sideprojects v products
+title: sideprojects vs. products
 tagline: The best way to build your side project is the same...
-tags: microblog
+tags: microblog sideprojects
 category: microblog
 maintag: microblog
 ---
