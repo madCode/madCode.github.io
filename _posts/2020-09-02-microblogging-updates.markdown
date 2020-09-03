@@ -5,6 +5,7 @@ tagline: The latest additions to my experiment: * A cron jo...
 tags: microblog
 category: microblog
 maintag: microblog
+date: 2020-09-02 14:02
 ---
 The latest additions to my experiment:
 * A cron job that uploads my posts twice a day
