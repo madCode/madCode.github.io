@@ -10,7 +10,7 @@ hackster_username: madcode
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 plugins: ["jekyll-paginate"]
 paginate: 5
