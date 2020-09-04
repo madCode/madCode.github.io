@@ -1,10 +1,11 @@
 ---
 layout: post
-title: sideprojects vs. products
-tagline: The best way to build your side project is the same...
-tags: microblog sideprojects
+title: sideprojects v products
+tagline: The best way to build your side project is the sam...
+tags: microblog
 category: microblog
 maintag: microblog
+date: 2020-09-01 10:50:17
 ---
 The best way to build your side project is the same as the best way to build products used by millions of people:
 
