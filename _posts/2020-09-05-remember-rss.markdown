@@ -1,11 +1,11 @@
 ---
 layout: post
-title: remember rss
+title: Remember RSS?
 tagline: Remember RSS? That universal subscription system a...
 tags: microblog
 category: microblog
 maintag: microblog
-date: 2020-09-06 00:11:54
+date: 2020-09-05 23:01
 ---
 Remember RSS? That universal subscription system across the web? It's actually still just as useful as before. Google Reader may have been a knock to its usage, but not to its publication. 
 
