@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Remember RSS?
-tagline: Remember RSS? That universal subscription system a...
+title: remember RSS?
+tagline: That universal subscription system a...
 tags: microblog
 category: microblog
 maintag: microblog

@@ -65,13 +65,13 @@ Hence we created ChairVoyager. As the user kicks back for a break, the smart lig
 
 A key design choice our group made was deciding how much interaction to require of the user. Smart phones require a lot of "unnatural" interaction: typing, selecting pages, etc. We aimed for something more natural, more intuitive. Rolling the chair over different parts of a rug seemed like a natural control system.
 
-![image of the rug](/images/chair/team1.jpg)
+![image of the rug](/images/chair/team1.jpg){: .img-responsive}
 
-We considered hiding exactly what different parts of the rug meant, so that the user could suddenly find themselves in the Congo with no visual cue. However, we decided that users would get frustrated without an understandable control system. A color-coded map outlining the continents gives users a visual cue about their location, but leaves an opportunity for the users to be greeted with unexpected and diverse news stories from a variety of countries in that continent. The bold colors make it clear where one area ends and another begins; the white background could also be programmed to play naval-related news or whale songs. Also the low resolution (big contents) made it easy for the user to land on their desired continent.
+We considered hiding exactly what different parts of the rug meant, so that the user could suddenly find themselves in the Congo with no visual cue. However, we decided that users would get frustrated without an understandable control system. A color-coded map outlining the continents gives users a visual cue about their location, but leaves an opportunity for the users to be greeted with unexpected and diverse news stories from a variety of countries in that continent. The bold colors make it clear where one area ends and another begins; the white background could also be programmed to play naval-related news or whale songs. Also the low resolution (big continents) made it easy for the user to land on their desired continent.
 
 ### Speaking to the User
 
-![image of speakers](/images/chair/speakers1.jpg)
+![image of speakers](/images/chair/speakers1.jpg){: .img-responsive}
 
 Another important design choice was the use of audio. Originally we thought of having a loudspeaker attached to the backrest of the chair and it would play the tracks in a high volume, enough for everyone in a room to hear it. After user research, we realized that noise is not a welcome solution in an office setting. We began thinking about different solutions and honed in on a surround sound quiet headrest with very localized sound where only the user sitting in the chair would hear the audio piece. The sound is not only localized, but also focused and amplified leading to a clean listening experience. Also,  office neighbors can work uninterrupted, barely making out a muffled sound, not knowing that the their friend is actually traveling in the Middle East at that moment.
 

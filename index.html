@@ -8,7 +8,7 @@ displaycategory: portfolio
 <div id="portfolio" class="row">
 {% for post in site.posts %}
 {% if post.categories contains page.displaycategory %}
-<a href="{{ BASE_PATH }}{{ post.url }}" class="col-sm-6">
+<a href="/{{ post.url }}" class="col-sm-6">
     <img src="{{post.teaser}}" class="img-responsive" alt="{{post.title}} header image">
     <div class="portfolio-caption">
         <h4>{{ post.title }}</h4>
@@ -48,18 +48,18 @@ displaycategory: portfolio
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+        <a href="{{ paginator.previous_page_path | replace: '//', '/' }}">&larr; Newer Posts</a>
     </li>
     {% endif %}
     {% if paginator.next_page %}
     <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+        <a href="{{ paginator.next_page_path | replace: '//', '/' }}">Older Posts &rarr;</a>
     </li>
     {% endif %}
 </ul>
 {% endif %}
 <!-- <br>
-<h1><a href="PUT LINK TO RSS FEED HERE">What I'm Reading <img id="social-button" class="img-responsive social-button filter-dark" src="/images/icons/rss.png" alt="rss feed for articles I've been reading" style="
+<h1><a href="PUT LINK TO RSS FEED HERE">What I'm Reading <img class="img-responsive filter-dark link-button" src="/images/icons/rss.png" alt="rss feed for articles I've been reading" style="
     display: inline;
 "></a></h1>
 <hr/>

@@ -1,6 +1,6 @@
 # Site settings
 title: Madeeha Ghori
-header-img: "images/home-bg.jpg"
+header-img: "/images/home-bg.jpg"
 email: madeeha.ghori@berkeley.edu
 description: "Write your site description here. It will be used as your sites meta description as well!"
 # url: "http://yourdomain.com"
