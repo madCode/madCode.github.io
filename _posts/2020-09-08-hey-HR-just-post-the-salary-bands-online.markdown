@@ -1,13 +1,13 @@
 ---
 layout: post
-title: hey HR just post the salary bands online
-tagline: # Hey, HR- just post the salary bands online  A co...
+title: hey, HR? just post the salary bands online
+tagline: A company reached out to me today, saying they were hiring. Here's a quote...
 tags: microblog
 category: microblog
 maintag: microblog
 date: 2020-09-08 23:56:00
 ---
-# Hey, HR: just post the salary bands online
+# Hey, HR? Just post the salary bands online
 
 A company reached out to me today, saying they were hiring. Here's a quote from the email:
 >We're huge on transparency and documentation, from our company culture to compensation (!!), so [I'll let our docs do the rest of the talking](https://www.notion.so/Curious-about-Otis-46df28b7e37c4b1fa5e4681a0efda4e4).

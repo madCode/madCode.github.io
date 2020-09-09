@@ -1,7 +1,7 @@
 ---
 layout: post
 title: how to write like a fourth grader
-tagline: Was re-reading [this article](https-//www.poetryfo...
+tagline: Was re-reading this article about how much better children are at writing poetry compared to adults...
 tags: microblog
 category: microblog
 maintag: microblog
