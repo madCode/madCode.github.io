@@ -39,8 +39,8 @@ layout: default
                 <h1>Related Posts</h1>
 
                 <ul>
-                    {% for post in site.posts %}
-                    {% if post.tags contains page.maintag and post.title != page.title %}
+                    {% assign related_posts = site.posts | where_exp: "post", "post.tags contains page.maintag and post.title != page.title" %}
+                    {% for post in related_posts limit:5 %}
                     <li>
                         <h4>
                             <a class="related-post" href="{{post.url}}">
@@ -48,7 +48,6 @@ layout: default
                             </a>
                         </h4>
                     </li>
-                    {% endif %}
                     {% endfor %}
                 </ul>
 
