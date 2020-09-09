@@ -8,7 +8,7 @@ displaycategory: portfolio
 <div id="portfolio" class="row">
 {% for post in site.posts %}
 {% if post.categories contains page.displaycategory %}
-<a href="{{ BASE_PATH }}{{ post.url }}" class="col-sm-6">
+<a href="/{{ post.url }}" class="col-sm-6">
     <img src="{{post.teaser}}" class="img-responsive" alt="{{post.title}} header image">
     <div class="portfolio-caption">
         <h4>{{ post.title }}</h4>
@@ -48,12 +48,12 @@ displaycategory: portfolio
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+        <a href="{{ paginator.previous_page_path | replace: '//', '/' }}">&larr; Newer Posts</a>
     </li>
     {% endif %}
     {% if paginator.next_page %}
     <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+        <a href="{{ paginator.next_page_path | replace: '//', '/' }}">Older Posts &rarr;</a>
     </li>
     {% endif %}
 </ul>
@@ -64,4 +64,4 @@ displaycategory: portfolio
 "></a></h1>
 <hr/>
 <div id="feeddisplay"></div>
-<script src="js/rss_reader.js"/>
+<script src="/js/rss_reader.js"/>
