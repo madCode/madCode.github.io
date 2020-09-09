@@ -15,15 +15,11 @@ h1{
    -webkit-filter: invert(80%);
 }
 
-#footer-button:hover {
-  -webkit-filter: brightness(0.5) sepia(1) hue-rotate(174deg) saturate(103.2%) brightness(103%%);
-}
-
 .link-button{
   max-height: 7rem;
 }
 
-.link-button:hover {
+.link-button:hover, .footer-button:hover {
   -webkit-filter: brightness(0.5) sepia(1) hue-rotate(176deg) saturate(92.5%) brightness(105%);
   filter: brightness(0.5) sepia(1) hue-rotate(176deg) saturate(92.5%) brightness(105%);
 }
