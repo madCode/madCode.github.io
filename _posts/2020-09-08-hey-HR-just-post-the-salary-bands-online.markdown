@@ -11,7 +11,7 @@ A company reached out to me today, saying they were hiring. Here's a quote from 
 >We're huge on transparency and documentation, from our company culture to compensation (!!), so [I'll let our docs do the rest of the talking](https://www.notion.so/Curious-about-Otis-46df28b7e37c4b1fa5e4681a0efda4e4).
 
 I clicked on the link, and two things stood out to me from the "Our Compensation" doc:
-1. Public salary bands. Imma say that again. Public 👏🏽salary 👏🏽 bands 👏🏽
+1. Public salary bands. Imma say that again. Public👏🏽salary👏🏽 bands👏🏽
 2. The "Steps" tab
 
 ## Public salary bands
