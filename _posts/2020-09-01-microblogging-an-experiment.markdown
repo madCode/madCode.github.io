@@ -1,7 +1,7 @@
 ---
 layout: post
 title: microblogging an experiment
-tagline: # Microblogging- An Experiment I've recently start...
+tagline: I've recently started following Dave Winer's blog...
 tags: microblog
 category: microblog
 maintag: microblog
