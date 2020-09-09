@@ -11,7 +11,7 @@ maintag: chairvoyager
 video: <iframe src="https://player.vimeo.com/video/122874832" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 instructions: instructions/2015/03/21/diychairvoyager/
-hackster: https://www.hackster.io/4269/chairvoyager
+hackster: https://www.hackster.io/4269/chairvoyager-d525be
 github: https://github.com/JonSEng/ChairVoyager
 
 header-img: /images/chair/header2.jpg
