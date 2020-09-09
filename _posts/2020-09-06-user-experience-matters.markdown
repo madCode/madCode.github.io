@@ -1,7 +1,7 @@
 ---
 layout: post
 title: user experience matters
-tagline: Today's thought-provoking read was this [2017 blog...
+tagline: Today's thought-provoking read was this 2017 blog...
 tags: microblog
 category: microblog
 maintag: microblog
