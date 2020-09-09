@@ -12,7 +12,7 @@ maintag: coaster
 video: <iframe class="flex-video-widescreen" src="https://www.youtube.com/embed/TRWMHCnoQ3U" frameborder="0"></iframe>
 
 instructions: instructions/2015/02/19/diycoaster/
-hackster: https://www.hackster.io/team-avocado/chatty-coasters
+hackster: https://www.hackster.io/team-avocado/chatty-coasters-e6b6a0
 github: https://github.com/madCode/chattyCoaster
 ---
 {% include portfolioheader.html %}

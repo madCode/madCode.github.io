@@ -14,10 +14,12 @@ I have a Nexus 7 tablet that was gifted to me back when it came out. It's only 3
 There are a few options when revitalizing an old android tablet:
 
 * revert back to an old version of android
-* [replace your android os with cyanogenmod](http://www.cyanogenmod.org/)
+* [replace your android os with cyanogenmod](https://en.wikipedia.org/wiki/CyanogenMod)
 * [use the tablet](http://www.pcworld.com/article/2109121/how-to-turn-an-old-phone-or-tablet-into-a-pc-productivity-tool.html) [for something entirely different](http://lifehacker.com/5925049/new-uses-for-your-old-tablet)
 
 ## What is Cyanogenmod?
+*Update 9/9/2020*: it looks like [cyanogenmod is discontinued. LineageOS might be a good alternative.](https://www.androidauthority.com/cyanogenmod-lineageos-654810/)
+
 As the website says,
 >Cyanogenmod is an alternative operating system intended to replace the one pre-installed on your smart phones and tablets. If you've got an older device that isn't getting updates anymore, or if your device seems unusually slow, or maybe you're sick of spyware, adware, and other unwanted garbage on your phone that you can't remove... Maybe your device is missing features or has been otherwise artificially limited in functionality. Perhaps you just could use a boost in performance... Or maybe you'd like to be more confident that your operating system has included some of the latest bug fixes...
 >If so, CM might be for you.
