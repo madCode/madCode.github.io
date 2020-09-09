@@ -37,9 +37,8 @@ layout: default
 
                 <hr>
                 <h1>Related Posts</h1>
-
                 <ul>
-                    {% assign related_posts = site.posts | where_exp: "post", "post.tags contains page.maintag and post.title != page.title" %}
+                    {% assign related_posts = site.posts | where_exp: "post", "post.title != page.title" | where_exp: "post", "post.tags contains page.maintag" %}
                     {% for post in related_posts limit:5 %}
                     <li>
                         <h4>
