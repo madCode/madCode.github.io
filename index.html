@@ -8,7 +8,7 @@ displaycategory: portfolio
 <div id="portfolio" class="row">
 {% for post in site.posts %}
 {% if post.categories contains page.displaycategory %}
-<a href="/{{ post.url }}" class="col-sm-6">
+<a href="{{ post.url }}" class="col-sm-6">
     <img src="{{post.teaser}}" class="img-responsive" alt="{{post.title}} header image">
     <div class="portfolio-caption">
         <h4>{{ post.title }}</h4>
