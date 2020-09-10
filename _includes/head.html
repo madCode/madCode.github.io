@@ -3,12 +3,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{% if post.tagline %}{{ post.tagline }}{% else %}{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}{% endif %}">
+    <meta name="description" content="{{site.url}}{% if post.tagline %}{{ post.tagline }}{% else %}{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}{% endif %}">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:image" content="{% if post.header-img %}{{ post.header-img }}{% else %}{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}{% endif %}">
+    <meta property="og:image" content="{{site.url}}{% if post.header-img %}{{ post.header-img }}{% else %}{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}{% endif %}">
     <!-- Twitter -->
-    <meta property="twitter:image" content="{% if post.header-img %}{{ post.header-img }}{% else %}{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}{% endif %}">
+    <meta property="twitter:image" content="{{site.url}}{% if post.header-img %}{{ post.header-img }}{% else %}{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}{% endif %}">
 
 
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
