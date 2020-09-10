@@ -15,21 +15,21 @@ Any movie you watch, there are phases that your brain moves through. Most movies
 
 # The stages of watching "I'm thinking of ending things"
 
-## 1. Collecting the vibes
+### 1. Collecting the vibes
 - Hm. Okay. This is definitely the atmosphere I was expecting— kinda slice of life indie deep-thought vibe.
 - Except with an underlying sense of...dread?
 - This movie is shot kinda like a horror movie. But without the horror.
 - Is he the janitor? No, they have very different noses.
 - I wonder if this entire movie will be set inside this car.
 
-## 3. Confusion begins to creep in
+### 3. Confusion begins to creep in
 - That was weird
 - Why would you go for a walk?
 - Ooh, I like her earrings
 - Yeah, it really is shot like a horror movie.
 - Hang on, did the dad get younger? Did the mom get older?
 
-## 3. Vibe check: overthrown. You notice your own confusion and intrigue as your brain scrambles to reorient itself.
+### 3. Vibe check: overthrown. You notice your own confusion and intrigue as your brain scrambles to reorient itself.
 - Was she wearing pearls before?
 - Aha! That's right, she wasn't. She was wearing these earrings because I liked these earrings.
 - What the heck is going on
@@ -39,7 +39,7 @@ Any movie you watch, there are phases that your brain moves through. Most movies
 - Okay...what. No, don't make any stops, just GO HOME
 - What does the ice cream girl mean?
 
-## 4. You begin to create a narrative out of what you've seen so far
+### 4. You begin to recreate a narrative out of what you've seen so far
 - Get out get out get out
 - He's definitely the janitor
 - Oh, I would be so upset
@@ -48,7 +48,7 @@ Any movie you watch, there are phases that your brain moves through. Most movies
 - Aw, it's the slippers
 - Yeah, I think she's the one with Alzheimer's
 
-## 5. Your previous narrative is smashed with a hammer. It's too late for this to be met with intrigue and reorientation. Instead, it's met with...
+### 5. Your narrative is destroyed. It's too late for intrigue and reorientation. Instead, it's met with...
 - Okay, maybe not.
 - I'm just gonna let this movie flow over me
 - If he ends this movie like [_Synecdoche, New York_](https://en.wikipedia.org/wiki/Synecdoche,_New_York), I'm gonna laugh
@@ -57,16 +57,16 @@ Any movie you watch, there are phases that your brain moves through. Most movies
 - Which vehicle was that? The truck or the car?
 - Huh. Did it start up again? What's that supposed to mean? I'm going to ignore it.
 
-## 6. You begin to gather your thoughts and conclusions with those who watched with you
+### 6. You begin to gather your thoughts and conclusions with those who watched with you
 - It does kinda feel like the woman has Alzheimer's. Until the dancers.
 - What's the deal with all the quoting of other material _inside_ of this material?
 - Maybe it's two stories about two people. The first half about the woman, the second about the man.
 - Maybe it's all about the janitor. He is the only character that exists the whole time.
 
-## 7. You go back to your everyday life.
+### 7. You go back to your everyday life.
 Usually, after a movie of this genre, you go through the next few hours of life seeing the everyday movements around you as the director would. Even banal conversation and silences can sound like a scene from the movie. You may think "how would the director shoot this, me washing dishes?" However, the vibes change so dramatically across this film that no such ideas develop.
 
-## 8. Occasionally, you swap new considerations with those who saw it with you. Your brain continues to chew on the movie.
+### 8. Occasionally, you swap new considerations with those who saw it with you. Your brain continues to chew on the movie.
 - Maybe it is all about the janitor. Maybe the inner voice of the woman is actually from the man. Now I kinda wanna see it again.
 - It does kinda make sense given that you see the janitor from the beginning. But then the interactions other characters have _just_ with the woman don't really make sense.
 - The breaking of the fourth wall...in her stare. So many pieces.
