@@ -5,9 +5,11 @@ tagline: a kaufman movie review
 tags: microblog movies
 category: microblog
 maintag: movies
+header-img: /images/im-thinking-of-ending-things-header.jpg
 date: 2020-09-10 00:31:22
 ---
-this post neither avoids nor indulges in spoilers
+###### [header image source](https://cdn.collider.com/wp-content/uploads/2020/08/im-thinking-of-ending-things-poster-jessie-buckley-social.jpeg)
+<mark>this post neither avoids nor indulges in spoilers</mark>
 
 Any movie you watch, there are phases that your brain moves through. Most movies you don't notice: the movie's goal is to take you on a journey without noticing. But there's a genre of film that makes you aware of your brain. You notice yourself feeling confused, recognizing things, recognizing that you probably should recognize things. You notice yourself noticing. Notice yourself understanding. Notice yourself giving up and letting the film wash over you.
 
