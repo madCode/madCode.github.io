@@ -13,7 +13,7 @@ date: 2020-09-10 00:31:22
 
 As you watch a movie, your brain moves through phases. Most times you won't notice it-- heck, the movie's goal is for you not to. But there's a genre of film that makes you aware of your brain. You notice yourself feeling confused, recognizing things, recognizing that the director wants you to recognize things. You notice yourself noticing. Notice yourself understanding. Notice yourself giving up and letting the film wash over you.
 
-## The stages of watching [_I'm Thinking of Ending Things_](https://en.wikipedia.org/wiki/I%27m_Thinking_of_Ending_Things_(film)):
+# The stages of watching [_I'm Thinking of Ending Things_](https://en.wikipedia.org/wiki/I%27m_Thinking_of_Ending_Things_(film)):
 
 ### 1. Collecting the vibes
 - Hm. Okay. This is definitely the atmosphere I was expecting— kinda slice of life indie deep-thought vibe.
