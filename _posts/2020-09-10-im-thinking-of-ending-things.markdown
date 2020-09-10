@@ -11,9 +11,9 @@ date: 2020-09-10 00:31:22
 ###### [header image source](https://cdn.collider.com/wp-content/uploads/2020/08/im-thinking-of-ending-things-poster-jessie-buckley-social.jpeg)
 <mark>this post neither avoids nor indulges in spoilers</mark>
 
-Any movie you watch, there are phases that your brain moves through. Most movies you don't notice: the movie's goal is to take you on a journey without noticing. But there's a genre of film that makes you aware of your brain. You notice yourself feeling confused, recognizing things, recognizing that you probably should recognize things. You notice yourself noticing. Notice yourself understanding. Notice yourself giving up and letting the film wash over you.
+As you watch a movie, your brain moves through phases. Most times you won't notice it-- heck, the movie's goal is for you not to. But there's a genre of film that makes you aware of your brain. You notice yourself feeling confused, recognizing things, recognizing that the director wants you to recognize things. You notice yourself noticing. Notice yourself understanding. Notice yourself giving up and letting the film wash over you.
 
-# The stages of watching "I'm thinking of ending things"
+## The stages of watching [_I'm Thinking of Ending Things_](https://en.wikipedia.org/wiki/I%27m_Thinking_of_Ending_Things_(film)):
 
 ### 1. Collecting the vibes
 - Hm. Okay. This is definitely the atmosphere I was expecting— kinda slice of life indie deep-thought vibe.
@@ -62,13 +62,14 @@ Any movie you watch, there are phases that your brain moves through. Most movies
 - What's the deal with all the quoting of other material _inside_ of this material?
 - Maybe it's two stories about two people. The first half about the woman, the second about the man.
 - Maybe it's all about the janitor. He is the only character that exists the whole time.
+- What did the girl with the ice cream mean??
 
 ### 7. You go back to your everyday life.
-Usually, after a movie of this genre, you go through the next few hours of life seeing the everyday movements around you as the director would. Even banal conversation and silences can sound like a scene from the movie. You may think "how would the director shoot this, me washing dishes?" However, the vibes change so dramatically across this film that no such ideas develop.
+Usually, after a movie of this genre, you go through the next few hours of life seeing everyday movements around you as the director would. Even a banal conversation or silence can sound like a scene from the movie. You may think "how would the director shoot this, me washing dishes?" However, the vibes change so dramatically across this film that no such ideas develop.
 
 ### 8. Occasionally, you swap new considerations with those who saw it with you. Your brain continues to chew on the movie.
 - Maybe it is all about the janitor. Maybe the inner voice of the woman is actually from the man. Now I kinda wanna see it again.
 - It does kinda make sense given that you see the janitor from the beginning. But then the interactions other characters have _just_ with the woman don't really make sense.
 - The breaking of the fourth wall...in her stare. So many pieces.
 - I don't want the woman to just be a figment of his imagination because then she solely exists to tell his own story and I'm tired of that trope. Though if that is the case, she acts like she lives outside of that imagination too, and is confused by being in the movie.
-- Also, if it's just a story about the janitor's lonely life and the woman is a all figment/conglomeration of his imagination...then this is just _Synecdoche, New York_ all over again.
+- Also, if it's just a story about the janitor's lonely life and the ~~women are~~ woman is a figment/conglomeration of his imagination...then this is just _Synecdoche, New York_ all over again.
