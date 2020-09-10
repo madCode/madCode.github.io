@@ -2,9 +2,9 @@
 layout: post
 title: remember RSS?
 tagline: That universal subscription system a...
-tags: microblog
+tags: microblog tech-musings open-source rss
 category: microblog
-maintag: microblog
+maintag: tech-musings
 date: 2020-09-05 23:01
 ---
 Remember RSS? That universal subscription system across the web? It's actually still just as useful as before. Google Reader may have been a knock to its usage, but not to its publication. 

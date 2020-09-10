@@ -2,9 +2,9 @@
 layout: post
 title: IPOs vs SPACs
 tagline: Came across two competing ideas this week. First, ...
-tags: microblog
+tags: microblog business finance fundraising startups
 category: microblog
-maintag: microblog
+maintag: business
 date: 2020-09-02 12:10:47
 ---
 Came across two competing ideas this week. First, from Bill Gurley, [IPOs are inefficient and leave money on the table](http://abovethecrowd.com/2020/08/23/going-public-circa-2020-door-3-the-spac/). The second, from Alex Rampell and Scott Kupor of Andreessen Horowitz: [it's natural and even _healthy_ for an IPO to pop.](https://a16z.com/2020/08/28/in-defense-of-the-ipo/)
