@@ -35,10 +35,11 @@ layout: default
 
 				{{ content }}
 
+                {% assign related_posts = site.posts | where_exp: "post", "post.title != page.title" | where_exp: "post", "post.tags contains page.maintag" %}
+                {% if related_posts.size > 0 %}
                 <hr>
                 <h1>Related Posts</h1>
                 <ul>
-                    {% assign related_posts = site.posts | where_exp: "post", "post.title != page.title" | where_exp: "post", "post.tags contains page.maintag" %}
                     {% for post in related_posts limit:5 %}
                     <li>
                         <h4>
@@ -49,6 +50,7 @@ layout: default
                     </li>
                     {% endfor %}
                 </ul>
+                {% endif %}
 
                 <hr>
 
