@@ -51,7 +51,7 @@ Any movie you watch, there are phases that your brain moves through. Most movies
 ## 5. Your previous narrative is smashed with a hammer. It's too late for this to be met with intrigue and reorientation. Instead, it's met with...
 - Okay, maybe not.
 - I'm just gonna let this movie flow over me
-- If he ends this movie like _Synecdoche, New York_, I'm gonna laugh
+- If he ends this movie like [_Synecdoche, New York_](https://en.wikipedia.org/wiki/Synecdoche,_New_York), I'm gonna laugh
 - Yeah, this kinda feels like the ending to _Synecdoche, New York_
 - Apparently that's the ending to "A Beautiful Mind"? Which must make this something from "Oklahoma"?
 - Which vehicle was that? The truck or the car?
