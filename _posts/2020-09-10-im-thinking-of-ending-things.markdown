@@ -6,6 +6,7 @@ tags: microblog movies
 category: microblog
 maintag: movies
 header-img: /images/im-thinking-of-ending-things-header.jpg
+link-img: /images/im-thinking-of-ending-things-link.jpg
 date: 2020-09-10 00:31:22
 ---
 ###### [header image source](https://cdn.collider.com/wp-content/uploads/2020/08/im-thinking-of-ending-things-poster-jessie-buckley-social.jpeg)
