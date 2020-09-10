@@ -2,9 +2,9 @@
 layout: post
 title: user experience matters
 tagline: Today's thought-provoking read was this 2017 blog...
-tags: microblog
+tags: microblog business ux
 category: microblog
-maintag: microblog
+maintag: business
 date: 2020-09-06 00:13:36
 ---
 Today's thought-provoking read was this [2017 blog post by Youngjin Yoo](https://youngjinyoo.com/2017/11/28/tales-of-two-stores/) about his drastically different experiences at two retail stores.

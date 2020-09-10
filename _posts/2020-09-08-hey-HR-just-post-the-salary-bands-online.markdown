@@ -2,9 +2,9 @@
 layout: post
 title: hey, HR? just post the salary bands online
 tagline: A company reached out to me today, saying they were hiring. Here's a quote...
-tags: microblog
+tags: microblog business tech-musings d&i
 category: microblog
-maintag: microblog
+maintag: business
 date: 2020-09-08 23:56:00
 ---
 A company reached out to me today, saying they were hiring. Here's a quote from the email:
