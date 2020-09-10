@@ -2,9 +2,9 @@
 layout: post
 title: how to incentivize virality
 tagline: Dave Winer posted today asking, about a new social app...
-tags: microblog
+tags: microblog tech-musings virality blockchain
 category: microblog
-maintag: microblog
+maintag: tech-musings
 date: 2020-09-02 23:27:03
 ---
 Dave Winer [posted today](http://scripting.com/2020/09/02/173236.html?title=clubhouseAfterAMonth) asking, about a new social app he's trying:
