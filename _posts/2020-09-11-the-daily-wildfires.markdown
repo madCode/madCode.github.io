@@ -2,7 +2,7 @@
 layout: post
 title: the daily wildfires
 tagline: I've occasionally felt that the NY Times' coverage...
-tags: microblog
+tags: microblog wildfires fires california
 category: microblog
 maintag: microblog
 date: 2020-09-11 12:23:40
