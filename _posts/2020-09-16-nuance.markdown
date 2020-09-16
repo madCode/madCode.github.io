@@ -1,0 +1,10 @@
+---
+layout: post
+title: nuance
+tagline: Larry Wilmore- "They celebrate nuance over clarity...
+tags: microblog
+category: microblog
+maintag: microblog
+date: 2020-09-16 11:27:47
+---
+Larry Wilmore: "They celebrate nuance over clarity. They put a premium on nuance where-- clarity is the thing that is more operative in the real world. That's how you get things done, is with clarity. Nuance is how you keep talking about something until you're blue in the face because nobody can ever agree on something."
